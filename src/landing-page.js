@@ -60,7 +60,7 @@ export function renderLandingPage(profile) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>${esc(profile.nome_exibicao || profile.nome)} — ${esc(profile.titulo)}</title>
+<title>${esc(profile.nome_exibicao || profile.nome)} | Currículo &amp; MCP Server</title>
 <meta name="description" content="${esc(profile.resumo_curto || "")}">
 <style>
   :root {
