@@ -1,0 +1,236 @@
+{
+  "nome": "Jeanderson Alves dos Santos",
+  "nome_exibicao": "Jean Santos",
+  "titulo": "QA / SDET com foco em automação inteligente e engenharia de avaliação de LLMs",
+  "localizacao": "Ponta Grossa, Paraná, Brasil",
+  "resumo_curto": "QA / SDET com foco em automação inteligente e engenharia de avaliação de LLMs. Único QA de um time de 6 engenheiros em produto de location intelligence com alto volume de entregas, construindo frameworks de automação do zero em Playwright e TypeScript. Reduzi ciclos de regressão de ~1 dia manual para 10 min e codifiquei 409 regras de negócio para validação preditiva com IA (MCP, RAG, DeepEval). Inglês C1. Aberto a vagas 100% remotas, nacionais e internacionais.",
+  "resumo": "Trabalho com Qualidade de Software e hoje atuo como único QA em um time com entrega em cadência acelerada por IA. Nesse ritmo, levo IA para dentro do próprio ciclo de qualidade: agentes autônomos, skills, projetos de contexto, MCP Servers, RAG e auto-healing aplicados à validação preditiva de regras de negócio.\n\nEspecializado em construir frameworks de automação robustos do zero, com Playwright e TypeScript.\n\nNa Cortex Geofusion, respondo pela qualidade ponta a ponta da plataforma OnMaps, produto de location intelligence. Recuperei a malha de testes legada (GoCD e GitLab) dos 16 serviços do time e construí um detector de verde falso, que expôs pipelines reportando sucesso em 1,7s sem executar um único teste. Implementei um monitoramento de produção 24/7 a cada 30 minutos, com anti-flap, revalidação em duas passadas e alarme ao SRE via Slack, além de dashboards no Grafana. Também arquitetei o qa-memory, uma base de conhecimento com 116 comportamentos e 409 regras de negócio mapeadas, usada para validação preditiva de regressões. Hoje, agentes geram, testam e buildam scripts de forma supervisionada, integram evidências ao Jira e enviam o código aprovado ao CI/CD (26 bugs e 13 issues críticas reportados).\n\nAntes disso, na Watch Brasil, fui o primeiro e único QA do produto Graça Play. Em 9 meses, construí a automação do zero, com cerca de 170 cenários (130 Web em Playwright/TypeScript com BDD e 40 Android em Appium), executados no CI via GitHub Actions a cada merge. Isso reduziu o ciclo de regressão de aproximadamente 1 dia manual para 10 minutos (Web) e 13 minutos (Android). Defini a estratégia de testes cobrindo 12 dos 13 fluxos críticos e validei cerca de 120 microsserviços com testes funcionais e de contrato, em Dev, QA e Produção, abrangendo Web, iOS, Android e Smart TV.\n\nTenho base sólida em cultura Shift-Left, ambientes ágeis (Scrum/Kanban), governança em Jira e orquestração de CI/CD via GitHub Actions e GitLab CI/CD. Inglês C1, com histórico de colaboração direta com times internacionais.\n\nAberto a oportunidades 100% remotas como Analista de Testes, Analista de QA, QA Automation Engineer ou SDET, com foco em automação inteligente, fluxo de trabalho guiado por IA e LLM Evaluation em times nacionais e internacionais.",
+  "contato": {
+    "linkedin": "https://www.linkedin.com/in/jean-santos72",
+    "github": "https://github.com/JeanSantos89",
+    "site": ""
+  },
+  "habilidades": {
+    "ia_aplicada_qa": ["AI Agents", "MCP Servers", "RAG", "AI Evals (LLM)", "DeepEval", "auto-healing", "prompt engineering", "Chrome DevTools Protocol"],
+    "automacao_de_testes": ["Playwright", "Cypress", "Appium", "Maestro", "Gherkin", "Cucumber", "BDD", "E2E", "Regressão", "Shift-Left"],
+    "linguagens": ["TypeScript", "JavaScript", "Java", "Python", "JUnit", "Mockito", "Jest"],
+    "backend_apis": ["Microsserviços", "testes de contrato", "Postman", "Swagger", "PostgreSQL", "MongoDB", "SQL"],
+    "cicd_observabilidade": ["GitHub Actions", "GitLab CI/CD", "Git", "Grafana", "Firebase Crashlytics", "Jira", "Qase", "Scrum", "Kanban"],
+    "outras": ["Capacidade de processo", "Pacote Office", "Power Automate", "VBA", "Docência", "LGPD", "Gestão de Riscos"]
+  },
+  "preferencias_vaga": {
+    "cargos": ["Engenheiro QA", "Desenvolvedor de software em teste", "Analista de testes", "Analista de teste/QA", "Analista de teste de automação"],
+    "tipos_localidade": ["Remoto"],
+    "localidades": ["Brasil"],
+    "data_inicio": "Imediatamente, estou me candidatando agora",
+    "tipos_emprego": ["Tempo integral"]
+  },
+  "principais_competencias": ["Test Automation", "Playwright", "CI/CD", "Inteligência Artificial", "TypeScript"],
+  "competencias_endossadas_linkedin": [
+    "Engenharia da qualidade", "Page Object Model", "Swagger API", "LangGraph", "DeepEval", "PYRIT", "LangFuse",
+    "GuardRails", "Test Automation Frameworks", "Test Engineering", "Segurança de IA", "Testes de segurança",
+    "OWASP", "Capacidade de processo", "Quality Monitoring", "Statistical Process Controls", "Exploratory Testing",
+    "Usability Testing", "Geração aumentada de recuperação (RAG)", "LLMs locais", "Test Assurance",
+    "Software Quality", "Protocolo de contexto de modelo (MCP)", "Big data", "Claude", "Agentes de IA",
+    "IA generativa", "Garantia de qualidade de software", "Cucumber", "Gherkin", "Python (Programming Language)",
+    "Teste de dispositivos móveis", "Appium", "Robot Framework", "Testes exploratórios",
+    "Teste de caixa branca", "Teste de software", "Planejamento de testes", "Casos de teste", "Testes ágeis",
+    "Metodologias ágeis e em cascata", "Teste de caixa-preta", "Cypress.io", "PostgreSQL", "Manual Testing",
+    "Teste de regressão", "Acompanhamento de bugs", "GitHub Actions", "Testes de API", "Postman API",
+    "Automação de testes", "Scrum", "Pandas", "GitHub", "WebDriver Selenium", "Automação de processos",
+    "Metodologias Agile", "Gestão de dados", "Coleta de dados", "LGPD", "Dados sensíveis", "Dashboards",
+    "ISO 17025:2017", "NBR ISO 17043:2011", "PowerBi", "JavaScript", "Docência", "Pacote Office", "Análise de dados",
+    "Inglês"
+  ],
+  "idiomas": [
+    { "idioma": "Português", "nivel": "Nativo" },
+    { "idioma": "Inglês", "nivel": "C1" }
+  ],
+  "experiencias": [
+    {
+      "empresa": "Cortex Geofusion",
+      "cargo": "Analista de QA",
+      "inicio": "mar. de 2026",
+      "fim": "o momento",
+      "descricao": "Responsável pela qualidade ponta a ponta do OnMaps, plataforma web de inteligência geográfica da Geofusion/Cortex. Cheguei sem operação de qualidade estruturada e, em 4 meses, construí do zero automação E2E, monitoramento de produção e uma base de conhecimento técnico usada para validação preditiva com IA generativa integrada do refinamento à produção.\n\n- Automação E2E do zero em 4 meses: 61 specs em Playwright + TypeScript em 3 camadas (E2E funcional, regressão pré-deploy e smoke de contrato de API), com arquitetura Page Object, fixtures e camada de serviços reutilizável.\n- Monitoramento de produção 24/7 (Heartbeat): workflow próprio em GitHub Actions validando o esqueleto crítico do OnMaps a cada 30 min, com lógica anti-flap que elimina falsos positivos e alarme ao time de SRE via Slack com evidências (screenshot e log) na thread.\n- Arquitetura de Qualidade com IA (Agentic QE): ecossistema de memória técnica (qa-memory) com MCP Server, RAG e comportamento auto-healing, codificando 116 comportamentos e 409 regras de negócio (99,5% de alta confiança, 69 P0/P1) para validação preditiva de regressões.\n- Shift-Left com IA preditiva: detecção de logic gaps antes do desenvolvimento e root-cause em nível de código (front e back), antecipando riscos e critérios de aceite no refinamento.\n- Testes de API e microsserviços: validação funcional e de contrato de endpoints críticos como gate de sanidade pós-deploy.\n- Ciclo de vida e defeitos: 26 bugs e 13 issues críticas reportados e priorizados com Produto/Engenharia, com rastreabilidade em sprint e acompanhamento até produção.",
+      "tecnologias": [
+        "Playwright",
+        "TypeScript",
+        "GitHub Actions",
+        "GoCD",
+        "GitLab",
+        "Grafana",
+        "Slack",
+        "MCP Server",
+        "RAG",
+        "Jira"
+      ]
+    },
+    {
+      "empresa": "Watch Brasil",
+      "cargo": "Analista de QA",
+      "inicio": "jul. de 2025",
+      "fim": "mar. de 2026",
+      "descricao": "Primeiro e único QA do Awdio (streaming Web, Android e iOS) e do backoffice de gestão de rádios. Assumi um produto sem nenhum processo, automação ou planejamento de teste e, em 9 meses, estruturei a operação de qualidade inteira, da estratégia de testes ao pipeline de regressão.\n\n- Automação E2E do zero: ~170 cenários em 9 meses, sendo 130 Web (Playwright + TypeScript, BDD Cucumber/Gherkin) e 40 Android (Appium), cobrindo 12 dos 13 fluxos críticos, com Gherkin como documentação viva das regras de negócio.\n- Regressão contínua em CI: pipeline em GitHub Actions a cada merge para staging, reduzindo um ciclo de regressão de ~1 dia manual para ~10 min (Web) e ~13 min (Android).\n- Microsserviços e APIs: testes funcionais e de contrato com Postman e Swagger entre mobile, web e backend.\n- QA data-driven em fluxos críticos: validação de assinaturas, tickets e integrações via manipulação direta de banco de dados, garantindo integridade da lógica de negócio.\n- Integração de monetização (GAM): validação da entrega de anúncios pelo link correto, com apresentação correta na UI e sem interferência no áudio.\n- Loop de qualidade com produção: monitoramento via Firebase Crashlytics e Performance, bugs do suporte e avaliações nas lojas, convertendo achados em novos testes.\n- Ciclo de vida e defeitos: refinamento com Produto e UX, priorização de bugs e rastreabilidade nas sprints, com acompanhamento até produção (iOS via TestFlight).\n- Projeto white label (Watch): validação de ~120 microsserviços e do funcionamento completo da versão Web de plataforma de streaming (TV, mobile e web) sob marca de outra empresa, incluindo Smart TV.",
+      "tecnologias": [
+        "Playwright",
+        "TypeScript",
+        "Cucumber/Gherkin",
+        "Appium",
+        "GitHub Actions",
+        "Postman",
+        "Swagger",
+        "Firebase Crashlytics",
+        "TestFlight"
+      ]
+    },
+    {
+      "empresa": "Testlio",
+      "cargo": "Quality Assurance Tester (Freelance)",
+      "inicio": "jan. de 2025",
+      "fim": "ago. de 2025",
+      "descricao": "Atuação como QA Tester Freelancer focado em Bug Hunting através da plataforma global de testes da Testlio.\n- Mapeamento de Falhas: execução de testes exploratórios e funcionais em aplicações de alta escala para identificação e isolamento de bugs críticos de sistema.\n- Reporte Técnico: documentação detalhada de defeitos (com passos de reprodução, logs e evidências) em inglês, garantindo a rastreabilidade para o time de engenharia.",
+      "tecnologias": ["Testes exploratórios", "Planejamento de testes", "Teste de caixa branca"]
+    },
+    {
+      "empresa": "Cooperativa Agrária Agroindustrial",
+      "cargo": "Técnico de laboratório",
+      "inicio": "set. de 2023",
+      "fim": "mar. de 2025",
+      "descricao": "Otimizei processos operacionais e fluxos de trabalho, oferecendo suporte ao desenvolvimento e à automação de sistemas laboratoriais, com foco em qualidade de documentação, confiabilidade dos sistemas e comunicação entre equipes técnicas e executivas.\n- Automação de fluxos de trabalho com redução de tempo de até 93,75%, via Excel, Power Automate e VBA.\n- Padronização e conformidade de documentação técnica seguindo ISO/IEC 17025 e NBR ISO 17043.\n- Identificação e documentação de falhas (bug hunting) e execução de casos de teste, apoiando a validação funcional das soluções.",
+      "tecnologias": ["Excel", "Power Automate", "VBA"]
+    },
+    {
+      "empresa": "Senac PR",
+      "cargo": "Professor de informática",
+      "inicio": "fev. de 2023",
+      "fim": "set. de 2023",
+      "descricao": "Ministrei aulas práticas de diversas ferramentas de software e hardware, preparando alunos de diferentes níveis para o mercado de trabalho através de abordagens dinâmicas e foco na aplicação profissional.\n- Aulas práticas de Excel, VBA, Power BI e ferramentas de hardware/software, com adaptação de conteúdo por nível técnico.\n- Preparo de alunos para o mercado de trabalho, com foco em aplicabilidade prática.",
+      "tecnologias": ["Excel", "VBA", "Power BI", "Docência", "LGPD"]
+    }
+  ],
+  "formacao": [
+    {
+      "instituicao": "Unicesumar",
+      "curso": "Tecnólogo em Análise e Desenvolvimento de Sistemas",
+      "local": "Ponta Grossa, PR",
+      "inicio": "ago. de 2022",
+      "fim": "ago. de 2026"
+    },
+    {
+      "instituicao": "Colégio Técnico Borell",
+      "curso": "Ensino Médio Técnico Integrado em Química",
+      "local": "Ponta Grossa, PR",
+      "inicio": "jan. de 2018",
+      "fim": "dez. de 2021"
+    }
+  ],
+  "certificacoes": [
+    { "nome": "AI Security Fundamentals – LLM Threats & OWASP 2026", "instituicao": "Packt", "emissao": "jun. de 2026", "credencial": "BS1KZZST6HMZ" },
+    { "nome": "Six Sigma Green Belt Specialization", "instituicao": "Kennesaw State University", "emissao": "jun. de 2026", "credencial": "0US3KBNW7UAM" },
+    { "nome": "IBM RAG and Agentic AI Specialization", "instituicao": "IBM", "emissao": "jun. de 2026", "credencial": "5WVN4N2XW5S4" },
+    { "nome": "Claude 101", "instituicao": "Anthropic", "emissao": "mar. de 2026", "credencial": "2yc5rg8yrhj7" },
+    { "nome": "Generative AI Learning Path – Google Cloud", "instituicao": "Google Cloud Skills Boost", "emissao": "mar. de 2026", "credencial": "22741390" },
+    { "nome": "Automation and Modern Testing Tools", "instituicao": "Board", "emissao": "dez. de 2025", "credencial": "DSAWB4H233NP" },
+    { "nome": "Advanced Quality and Capstone Project", "instituicao": "Board", "emissao": "out. de 2025", "credencial": null },
+    { "nome": "Engineering Practices for Building Quality Software", "instituicao": "University of Minnesota", "emissao": "nov. de 2025", "credencial": "IHC40AEB9QMF" },
+    { "nome": "AWS Cloud Technical Essentials", "instituicao": "Amazon Web Services (AWS)", "emissao": "dez. de 2025", "credencial": null },
+    { "nome": "Robot Framework e Appium para Android e iOS", "instituicao": "Udemy", "emissao": "jun. de 2025", "credencial": "UC-113e933b-4d88-4e16-8aba-83ebb120c58a" },
+    { "nome": "Programa Desenvolve", "instituicao": "Grupo Boticário", "emissao": "mai. de 2025", "credencial": null },
+    { "nome": "The Complete 2025 Software Testing Bootcamp", "instituicao": "Udemy", "emissao": "jun. de 2025", "credencial": "UC-8ec2a9a0-694e-49c9-94bd-4f87aab29c74" },
+    { "nome": "Intermediate Selenium WebDriver and Automation", "instituicao": "Packt", "emissao": "jun. de 2025", "credencial": null },
+    { "nome": "EF SET English Certificate 77/100 (C2 Proficient)", "instituicao": "EF", "emissao": "jul. de 2025", "credencial": null },
+    { "nome": "Scrum Fundamentals Certified", "instituicao": "VMEdu.com", "emissao": "jul. de 2025", "credencial": "1076318" },
+    { "nome": "ABNT NBR ISO IEC 17025:2017", "instituicao": "Evidência Consultoria Treinamento", "emissao": "jan. de 2025", "credencial": null },
+    { "nome": "Análise de Mercado", "instituicao": "Sistema OCB", "emissao": "ago. de 2024", "credencial": "070986ad-c664-492c-a168-74136db08eaf" },
+    { "nome": "LGPD: o que eu preciso saber?", "instituicao": "Sistema OCB", "emissao": "ago. de 2024", "credencial": "1afc7445-8854-456e-8bd6-072d3419bdce" },
+    { "nome": "Power BI Completo - Do básico ao Avançado", "instituicao": "Udemy", "emissao": "ago. de 2024", "credencial": "UC-a01c787a-f8d8-42fb-9c23-61b77a1f9910" },
+    { "nome": "Domain Driven Design", "instituicao": "UTFPR", "emissao": "out. de 2022", "credencial": "9904692.5548181.180747.7.51325866304044017377" },
+    { "nome": "EF SET English Certificate 72/100 (C2 Proficient)", "instituicao": "EF", "emissao": "out. de 2023", "credencial": null }
+  ],
+  "projetos": [
+    {
+      "nome": "test-quality-judge",
+      "descricao": "A dual-judge quality gate for LLM-generated test cases: one judge checks requirement coverage, the other checks for hallucinated function/endpoint names, each in an isolated context.",
+      "link": "https://github.com/JeanSantos89/test-quality-judge",
+      "tecnologias": ["Python"]
+    },
+    {
+      "nome": "llm-eval-engineering",
+      "descricao": "LLM evaluation lab: measuring a RAG system's quality with DeepEval — faithfulness, retrieval metrics, and hallucination detection over a categorized golden dataset.",
+      "link": "https://github.com/JeanSantos89/llm-eval-engineering",
+      "tecnologias": ["DeepEval", "RAG", "Python", "LangGraph"]
+    },
+    {
+      "nome": "playwright-test-kit",
+      "descricao": "Four small tools for tests that pass without proving anything: requests stuck pending, destructive tests sharing a session, assertions the engine never evaluates, and setup steps referenced by position.",
+      "link": "https://github.com/JeanSantos89/playwright-test-kit",
+      "tecnologias": ["TypeScript", "Playwright"]
+    },
+    {
+      "nome": "QE-agents-workflow",
+      "descricao": "A quality engineering workflow built entirely as agent configuration: one slash command, one skill, and seven subagents that carry a ticket from links to product review. Refuses to invent context, refuses to claim an unverified pass, and stops for every human decision. Companion to QA-memory.",
+      "link": "https://github.com/JeanSantos89/QE-agents-workflow",
+      "tecnologias": ["AI Agents", "MCP", "Claude Code", "Playwright", "Prompt Engineering"]
+    },
+    {
+      "nome": "ci-reliability-toolkit",
+      "descricao": "Seven small tools for catching CI that reports green without proving anything: fabricated reports, flaky-masked regressions, stale sources, crash loops, un-alerted failures, and rotten skip tags.",
+      "link": "https://github.com/JeanSantos89/ci-reliability-toolkit",
+      "tecnologias": ["TypeScript", "Teste de regressão"]
+    },
+    {
+      "nome": "QA-memory",
+      "descricao": "Servidor MCP (Model Context Protocol) production-grade que atua como camada semântica de conhecimento para times de QA e agentes autônomos de desenvolvimento. Armazena e serve contexto persistente de produto — regras de negócio, fluxos críticos e incidentes históricos.",
+      "link": "https://github.com/JeanSantos89/QA-memory",
+      "tecnologias": ["MCP Server", "TypeScript", "Python", "RAG"]
+    },
+    {
+      "nome": "E2E-ecommerce-validation-framework",
+      "descricao": "Projeto de automação E2E com Playwright e TypeScript implementando o padrão Page Object Model (POM). Valida regras de negócio e edge cases de e-commerce (montagem de produtos multi-atributo, gestão de carrinho, validação de limites de input) no ecossistema nopCommerce.",
+      "link": "https://github.com/JeanSantos89/E2E-ecommerce-validation-framework",
+      "tecnologias": ["Playwright", "TypeScript", "POM"]
+    },
+    {
+      "nome": "e2e-ecommerce-playwright",
+      "descricao": "Projeto de automação E2E com Playwright e TypeScript utilizando POM avançado com locators desacoplados. Valida uma aplicação de e-commerce dinâmica em React, com foco em fluxos stateful, filtros web, contadores de carrinho e asserções financeiras/matemáticas precisas.",
+      "link": "https://github.com/JeanSantos89/e2e-ecommerce-playwright",
+      "tecnologias": ["Playwright", "TypeScript", "React"]
+    },
+    {
+      "nome": "Streaming-typescript-playwright",
+      "descricao": "Framework de automação E2E enterprise de alta escalabilidade, construído com Playwright e TypeScript para o ecossistema TMDB. Demonstra padrões arquiteturais avançados, gestão robusta de estado e CI/CD, simulando jornadas reais como autenticação multi-estado, paginação assíncrona e operações CRUD stateful.",
+      "link": "https://github.com/JeanSantos89/Streaming-typescript-playwright",
+      "tecnologias": ["Playwright", "TypeScript", "CI/CD"]
+    },
+    {
+      "nome": "E2E-Quality-Pipeline",
+      "descricao": "Repositório de automação QA shift-left com Python, Pytest e Playwright para fluxos de e-commerce (SauceDemo). Conecta gestão de testes e execução contínua, validando transações core (Auth, Carrinho) com especificações Gherkin, templates padronizados de bug e GitHub Actions automatizado.",
+      "link": "https://github.com/JeanSantos89/E2E-Quality-Pipeline",
+      "tecnologias": ["Python", "Pytest", "Playwright", "Gherkin", "GitHub Actions"]
+    },
+    {
+      "nome": "Appium-Robot-Study",
+      "descricao": "Repositório de automação de testes mobile usando Robot Framework e Appium v2. Demonstra testes funcionais end-to-end em aplicações Android reais e simuladas, com estrutura de keywords customizadas, locators de UI (UIAutomator2), geração de logs e verificação de fluxos/tarefas mobile.",
+      "link": "https://github.com/JeanSantos89/Appium-Robot-Study",
+      "tecnologias": ["Robot Framework", "Appium", "UIAutomator2"]
+    }
+  ],
+  "recomendacoes_recebidas": [
+    {
+      "autor": "Jefferson Silva",
+      "cargo_autor": "Technical Lead | Solution Architect | Software Engineer",
+      "relacao": "Supervisionava Jean diretamente",
+      "data": "28 de julho de 2026",
+      "texto": "Jean é um profissional em constante evolução. Sempre muito prestativo e com uma vontade grande de inovar, sempre traz insights para os times no qual trabalha. Recomendo-o muito, cabe em qualquer time e equipe que queiram alçar voos de qualidade altos em seus projetos."
+    },
+    {
+      "autor": "Jean Luka Oliveira Santos",
+      "cargo_autor": "Technology Manager | Engineering Manager | IT Manager | Technical Solutions | Software Engineering | Cloud & DevOps | IT Governance",
+      "relacao": "Supervisionava Jean diretamente",
+      "data": "13 de março de 2026",
+      "texto": "Tive a oportunidade de trabalhar com Jeanderson e posso afirmar que ele é um profissional de QA extremamente dedicado e detalhista. Durante o período em que colaboramos, ele demonstrou grande capacidade de identificar problemas antes mesmo de chegarem aos usuários finais, contribuindo diretamente para a melhoria da qualidade dos produtos entregues. Além do forte conhecimento em testes funcionais e análise de requisitos, Jeanderson também se destacou pela comunicação clara com desenvolvedores, product managers e demais membros do time, facilitando a resolução rápida de bugs e o aprimoramento contínuo dos processos de qualidade. Seu pensamento crítico, organização e comprometimento com boas práticas de testes fazem dele um grande diferencial em qualquer equipe de desenvolvimento. Recomendo sem sombra de dúvidas o Jeanderson para qualquer equipe que valorize qualidade, responsabilidade e colaboração."
+    }
+  ],
+  "github_usuario": "JeanSantos89"
+}

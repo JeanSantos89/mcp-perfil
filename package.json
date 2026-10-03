@@ -1,0 +1,17 @@
+{
+  "name": "mcp-perfil",
+  "version": "1.0.0",
+  "description": "Servidor MCP que expõe informações do meu perfil profissional",
+  "type": "module",
+  "main": "src/server.js",
+  "bin": {
+    "mcp-perfil": "src/server.js"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "start:http": "node src/http-server.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4"
+  }
+}
