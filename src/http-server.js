@@ -1,21 +1,16 @@
 #!/usr/bin/env node
 import { createServer } from "http";
 import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
-import { createMcpServer } from "./create-server.js";
+import { createMcpServer, loadProfile } from "./create-server.js";
+import { renderLandingPage } from "./landing-page.js";
 
 const PORT = process.env.PORT || 3000;
 
 const httpServer = createServer(async (req, res) => {
   if (req.method === "GET" && req.url === "/") {
-    res.writeHead(200, { "Content-Type": "application/json" });
-    res.end(
-      JSON.stringify({
-        status: "ok",
-        name: "mcp-perfil",
-        endpoint: "/mcp",
-        protocolo: "MCP Streamable HTTP",
-      })
-    );
+    const profile = await loadProfile();
+    res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
+    res.end(renderLandingPage(profile));
     return;
   }
 

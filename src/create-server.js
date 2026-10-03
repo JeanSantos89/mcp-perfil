@@ -12,7 +12,7 @@ import { dirname, join } from "path";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const PROFILE_PATH = join(__dirname, "..", "profile.json");
 
-async function loadProfile() {
+export async function loadProfile() {
   const raw = await readFile(PROFILE_PATH, "utf-8");
   return JSON.parse(raw);
 }
