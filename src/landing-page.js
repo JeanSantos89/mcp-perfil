@@ -1137,6 +1137,20 @@ export function renderLandingPage(profile, liveRepos = null) {
         video.addEventListener("loadedmetadata", onVideoReady, { once: true });
       }
 
+      // Browsers pause a backgrounded <video> to save battery, and resuming
+      // the tab doesn't restart it on its own — without this the portrait
+      // effect freezes on the last frame it had when you tabbed away.
+      document.addEventListener("visibilitychange", () => {
+        if (document.visibilityState === "visible" && video.paused) {
+          video.play().catch(() => {});
+        }
+      });
+      // A back-forward-cache restore (navigating back to the page) can also
+      // leave the video paused without firing visibilitychange.
+      window.addEventListener("pageshow", (e) => {
+        if (e.persisted && video.paused) video.play().catch(() => {});
+      });
+
       window.addEventListener("resize", setupGrid);
       // The hero column settles after fonts load, so recompute the grid
       // whenever the container itself changes size.
