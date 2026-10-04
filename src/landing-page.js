@@ -351,7 +351,7 @@ export function renderLandingPage(profile, liveRepos = null) {
     --font-mono: "JetBrains Mono", monospace;
   }
   * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; scrollbar-gutter: stable; }
   body {
     margin: 0;
     background-color: var(--bg);
