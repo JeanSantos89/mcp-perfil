@@ -321,7 +321,7 @@ export function renderLandingPage(profile, liveRepos = null) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" type="image/jpeg" href="/favicon.jpg">
+<link rel="icon" type="image/jpeg" href="/favicon.jpg?v=2">
 <title>${esc(profile.nome_exibicao || profile.nome)} | Currículo e MCP Server</title>
 <meta name="description" content="${esc(profile.resumo_curto || "")}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1099,11 +1099,18 @@ export function renderLandingPage(profile, liveRepos = null) {
 
       const video = document.getElementById("portrait-video");
 
-      video.addEventListener("loadedmetadata", () => {
+      function onVideoReady() {
         setupGrid();
         video.play().catch(() => {});
         requestAnimationFrame(draw);
-      });
+      }
+      // autoplay can fetch metadata before this script runs, so the event
+      // may already have fired by the time we attach the listener.
+      if (video.readyState >= 1) {
+        onVideoReady();
+      } else {
+        video.addEventListener("loadedmetadata", onVideoReady, { once: true });
+      }
 
       window.addEventListener("resize", setupGrid);
       // The hero column settles after fonts load, so recompute the grid
