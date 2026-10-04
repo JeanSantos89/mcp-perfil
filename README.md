@@ -153,3 +153,8 @@ a página renderiza um card/entrada por item do `profile.json` (sem hardcode de
 conteúdo), o PDF do currículo é gerado com sucesso nos dois idiomas, e as rotas
 HTTP respondem como esperado — incluindo um teste de regressão para a proteção
 contra path traversal na rota de arquivos estáticos.
+
+## Licença
+
+[MIT](LICENSE) — use, copie, modifique e redistribua à vontade, inclusive
+comercialmente, só mantendo o aviso de copyright.

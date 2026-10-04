@@ -2,6 +2,7 @@
   "name": "mcp-perfil",
   "version": "1.0.0",
   "description": "MCP server that exposes my professional profile information",
+  "license": "MIT",
   "type": "module",
   "main": "src/server.js",
   "bin": {
