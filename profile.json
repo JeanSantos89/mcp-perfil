@@ -8,7 +8,7 @@
   "contato": {
     "linkedin": "https://www.linkedin.com/in/jean-santos72",
     "github": "https://github.com/JeanSantos89",
-    "site": ""
+    "site": "https://jean-santos.onrender.com"
   },
   "habilidades": {
     "ia_aplicada_qa": [
@@ -418,7 +418,7 @@
     },
     {
       "nome": "test-quality-judge",
-      "descricao": "A dual-judge quality gate for LLM-generated test cases: one judge checks requirement coverage, the other checks for hallucinated function/endpoint names, each in an isolated context.",
+      "descricao": "Um gate de qualidade com dois juízes para casos de teste gerados por LLM: um juiz verifica a cobertura dos requisitos, o outro verifica nomes de função/endpoint alucinados, cada um em um contexto isolado.",
       "link": "https://github.com/JeanSantos89/test-quality-judge",
       "tecnologias": [
         "Python"
@@ -428,7 +428,7 @@
     },
     {
       "nome": "llm-eval-engineering",
-      "descricao": "LLM evaluation lab: measuring a RAG system's quality with DeepEval: faithfulness, retrieval metrics, and hallucination detection over a categorized golden dataset.",
+      "descricao": "Laboratório de avaliação de LLM: mede a qualidade de um sistema RAG com DeepEval — fidelidade, métricas de recuperação e detecção de alucinação sobre um golden dataset categorizado.",
       "link": "https://github.com/JeanSantos89/llm-eval-engineering",
       "tecnologias": [
         "DeepEval",
@@ -441,7 +441,7 @@
     },
     {
       "nome": "playwright-test-kit",
-      "descricao": "Four small tools for tests that pass without proving anything: requests stuck pending, destructive tests sharing a session, assertions the engine never evaluates, and setup steps referenced by position.",
+      "descricao": "Quatro ferramentas pequenas para testes que passam sem provar nada: requests presos em pending, testes destrutivos compartilhando sessão, asserções que o engine nunca avalia, e passos de setup referenciados por posição.",
       "link": "https://github.com/JeanSantos89/playwright-test-kit",
       "tecnologias": [
         "TypeScript",
@@ -452,7 +452,7 @@
     },
     {
       "nome": "QE-agents-workflow",
-      "descricao": "A quality engineering workflow built entirely as agent configuration: one slash command, four skills, and six subagents that carry a ticket from links to product review. Refuses to invent context, refuses to claim an unverified pass, and stops for every human decision. Companion to QA-memory.",
+      "descricao": "Um workflow de engenharia de qualidade construído inteiramente como configuração de agentes: um slash command, quatro skills e seis subagentes que levam um ticket dos links até a revisão de produto. Recusa-se a inventar contexto, recusa-se a declarar um pass não verificado, e para para toda decisão humana. Complementar ao QA-memory.",
       "link": "https://github.com/JeanSantos89/QE-agents-workflow",
       "tecnologias": [
         "AI Agents",
@@ -466,7 +466,7 @@
     },
     {
       "nome": "ci-reliability-toolkit",
-      "descricao": "Seven small tools for catching CI that reports green without proving anything: fabricated reports, flaky-masked regressions, stale sources, crash loops, un-alerted failures, and rotten skip tags.",
+      "descricao": "Sete ferramentas pequenas para flagrar CI que reporta verde sem provar nada: relatórios fabricados, regressões mascaradas por flakiness, fontes desatualizadas, loops de crash, falhas sem alerta e tags de skip podres.",
       "link": "https://github.com/JeanSantos89/ci-reliability-toolkit",
       "tecnologias": [
         "TypeScript",

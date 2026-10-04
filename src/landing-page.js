@@ -11,7 +11,7 @@ function esc(str = "") {
 }
 
 function cm() {
-  return `<span class="cm tl" aria-hidden="true"></span><span class="cm tr" aria-hidden="true"></span>`;
+  return "";
 }
 
 /** Bilingual attributes. The document renders in English, so the element's
@@ -339,7 +339,7 @@ export function renderLandingPage(profile, liveRepos = null) {
     --bg-emphasis: #1e3a57;
     --text: var(--pearl);
     --text-muted: #91857c;
-    --border: rgba(36, 64, 92, 0.2);
+    --border: rgba(36, 64, 92, 0.11);
     --theme: var(--pearl);
     --ember: #a8392f;
     --card: #090909;
@@ -372,8 +372,8 @@ export function renderLandingPage(profile, liveRepos = null) {
   h1, h2, h3 { letter-spacing: -0.03em; margin: 0; font-weight: 800; }
   p { margin: 0; }
 
-  .frame { width: min(var(--frame), 100% - 16px); border-inline: 1px solid var(--border); margin: 0 auto; }
-  .cell { position: relative; border-bottom: 1px solid var(--border); }
+  .frame { width: min(var(--frame), 100% - 16px); margin: 0 auto; }
+  .cell { position: relative; }
   .pad { padding: 56px var(--gutter); }
   @media (max-width: 1023px) { :root { --gutter: 32px; } }
   @media (max-width: 767px) { :root { --gutter: 12px; } .pad { padding: 32px var(--gutter); } }
@@ -510,15 +510,24 @@ export function renderLandingPage(profile, liveRepos = null) {
 
   .install { display: flex; flex-direction: column; gap: 10px; max-width: 560px; margin-top: 36px; }
   .install [role="tablist"] { align-self: flex-start; display: flex; }
-  .install [role="tablist"] button { font-family: var(--font-mono); font-size: 12px; padding: 6px 14px; border: 1px solid var(--border); background: transparent; color: var(--text-muted); cursor: pointer; margin-left: -1px; }
+  .install [role="tablist"] button { font-family: var(--font-mono); font-size: 12px; padding: 6px 14px; border: 1px solid var(--border); background: transparent; color: var(--text-muted); cursor: pointer; margin-left: -1px; transition: color 0.25s ease, background-color 0.25s ease; }
   .install [role="tablist"] button:first-child { margin-left: 0; border-top-left-radius: var(--radius); border-bottom-left-radius: var(--radius); }
   .install [role="tablist"] button:last-child { border-top-right-radius: var(--radius); border-bottom-right-radius: var(--radius); }
   .install [role="tablist"] button[aria-selected="true"] { color: var(--text); background: var(--bg-muted); }
   .install-field { background: var(--card); display: flex; flex-wrap: wrap; row-gap: 8px; align-items: center; gap: 12px; padding: 12px 12px 12px 18px; border: 1px solid var(--border); border-radius: var(--radius); }
   .install-cmds { display: grid; flex: 1 0 auto; max-width: 100%; min-width: 0; }
-  .install-cmds > code { grid-area: 1 / 1; font-family: var(--font-mono); font-size: 13px; color: var(--text); overflow-x: auto; }
-  /* Keep hidden commands in flow so the field never changes width. */
-  .install-cmds > code[hidden] { display: block; visibility: hidden; }
+  /* Keep every command in flow (grid-area stack) so the field never changes
+     width or height; only opacity crossfades between them. */
+  .install-cmds > code {
+    grid-area: 1 / 1;
+    font-family: var(--font-mono); font-size: 13px; color: var(--text); overflow-x: auto;
+    opacity: 1; pointer-events: auto;
+    transition: opacity 0.3s ease;
+  }
+  .install-cmds > code[hidden] { display: block; opacity: 0; pointer-events: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .install-cmds > code { transition: none; }
+  }
   .install-field button { margin-left: auto; }
 
   .hero-links { display: flex; gap: 16px; margin-top: 28px; }
@@ -531,9 +540,19 @@ export function renderLandingPage(profile, liveRepos = null) {
     align-items: center;
     justify-content: center;
     min-height: 480px;
-    background: var(--bg);
   }
   @media (max-width: 899px) { .hero-portrait { min-height: 320px; } }
+  /* Blacks out the center so the portrait itself stays clean, but lets the
+     fixed background dot field bleed in only near the edges of the box.
+     Sits behind the canvas (source order, no z-index) so the face effect
+     always paints on top of it. */
+  .hero-portrait::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(ellipse at center, var(--bg) 40%, transparent 100%);
+  }
   #portrait-canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
   .portrait-caption { z-index: 3; background: var(--bg); padding: 2px 6px; position: absolute; bottom: 12px; left: 16px; font-family: var(--font-mono); color: var(--text-muted); font-size: 11px; }
 
@@ -582,7 +601,24 @@ export function renderLandingPage(profile, liveRepos = null) {
   .grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; padding: 0 var(--gutter) 56px; }
   @media (max-width: 1023px) { .grid3 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
   @media (max-width: 767px) { .grid3 { grid-template-columns: minmax(0, 1fr); } }
-  .pui-card { background: var(--card); border: 1px solid var(--border); border-radius: calc(var(--radius) * 1.5); overflow: hidden; }
+  .pui-card {
+    position: relative;
+    border: 1px solid var(--border);
+    border-radius: calc(var(--radius) * 1.5);
+    overflow: hidden;
+  }
+  /* Same treatment as the hero portrait: the card itself stays readable in
+     the center, but its background dot-bleeds into the fixed page field at
+     the edges instead of sitting as a flat opaque rectangle. */
+  .pui-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background: radial-gradient(ellipse at center, var(--card) 40%, transparent 100%);
+  }
+  .pui-card-content { position: relative; z-index: 1; }
   .pui-card-content { display: grid; gap: 12px; padding: 20px; }
   a.pui-card { color: inherit; text-decoration: none; display: flex; flex-direction: column; transition: border-color 0.15s ease; }
   a.pui-card:hover { border-color: var(--text-muted); }
@@ -679,6 +715,7 @@ export function renderLandingPage(profile, liveRepos = null) {
   .profiles { display: flex; flex-wrap: wrap; gap: 8px 24px; margin: 0; padding: 0; list-style: none; }
   .profiles a { color: var(--text-muted); text-decoration: none; }
   .profiles a:hover { color: var(--text); }
+  .made-by { opacity: 0.6; }
   @media (max-width: 767px) { .site-footer { flex-direction: column; align-items: flex-start; } }
 </style>
 </head>
@@ -687,10 +724,7 @@ export function renderLandingPage(profile, liveRepos = null) {
   <div class="frame">
     <header class="cell nav">
       ${cm()}
-      <a class="brand" href="/">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C8 6 5 10 5 14a7 7 0 0 0 14 0c0-4-3-8-7-12Z" stroke="var(--ember)" stroke-width="1.6"/></svg>
-        <span>${esc(profile.nome_exibicao || profile.nome)}</span>
-      </a>
+      <span></span>
       <nav class="nav-links">
         <a href="#trajetoria">${uiText("navTrajectory")}</a>
         <a href="#projetos">${uiText("navProjects")}</a>
@@ -717,7 +751,6 @@ export function renderLandingPage(profile, liveRepos = null) {
         <div class="human">
           <p class="hero-label">
             ${uiText("heroLabelA")}
-            <span class="pui-chip pui-outline pui-surface">Cortex Geofusion</span>
           </p>
           <p class="hero-about">${uiText("heroAbout")}</p>
         </div>
@@ -736,15 +769,16 @@ export function renderLandingPage(profile, liveRepos = null) {
         </div>
 
         <div class="hero-links">
-          ${profile.contato?.linkedin ? `<a class="pui-btn pui-solid pui-theme" href="${esc(profile.contato.linkedin)}" target="_blank" rel="noopener">LinkedIn</a>` : ""}
+          ${profile.contato?.linkedin ? `<a class="pui-btn pui-outline pui-surface" href="${esc(profile.contato.linkedin)}" target="_blank" rel="noopener">LinkedIn</a>` : ""}
           ${profile.contato?.github ? `<a class="pui-btn pui-outline pui-surface" href="${esc(profile.contato.github)}" target="_blank" rel="noopener">GitHub</a>` : ""}
+          <a class="pui-btn pui-outline pui-surface" href="mailto:jeansaantos89@gmail.com" ${bi("Enviar email", "Send email")}>Send email</a>
+          <a class="pui-btn pui-outline pui-surface" id="resume-link" href="/resume?lang=en" download ${bi("Baixar currículo", "Download resume")}>Download resume</a>
         </div>
       </div>
 
       <div class="hero-portrait">
         <video id="portrait-video" src="/portrait.mp4" muted loop playsinline autoplay style="display:none"></video>
         <canvas id="portrait-canvas"></canvas>
-        <span class="portrait-caption">portrait.mp4 · dots</span>
       </div>
     </section>
 
@@ -799,7 +833,6 @@ export function renderLandingPage(profile, liveRepos = null) {
     ${agentBlock(recAgentPt, recAgentEn)}
 
     <section class="cell pad agents-cell" id="agentes">
-      <span class="tag">code[role=textbox] · .facet · .proj-link</span>
       <div class="agents-grid">
         <div>
           <span class="index">${uiText("idxAgents")}</span>
@@ -824,8 +857,9 @@ export function renderLandingPage(profile, liveRepos = null) {
         ${profile.contato?.github ? `<li><a href="${esc(profile.contato.github)}" target="_blank" rel="noopener">GitHub ${esc(profile.github_usuario || "")}</a></li>` : ""}
         ${profile.contato?.linkedin ? `<li><a href="${esc(profile.contato.linkedin)}" target="_blank" rel="noopener">LinkedIn jean-santos72</a></li>` : ""}
         <li><a href="#agentes">MCP /mcp</a></li>
+        <li><a href="mailto:jeansaantos89@gmail.com" ${bi("Enviar email", "Send email")}>Send email</a></li>
       </ul>
-      <span>${esc(nome)}</span>
+      <span class="made-by">Made with Claude Opus 5.5</span>
     </footer>
   </div>
 
@@ -843,11 +877,11 @@ export function renderLandingPage(profile, liveRepos = null) {
       const PULL_RADIUS = 115;   // px of influence around the pointer
       const PULL_STRENGTH = 0.62; // fraction of the gap each dot closes
       const EASE = 0.14;          // how quickly a dot reacts and settles back
-      const BASE = { r: 30, g: 58, b: 87 };
+      const BASE = { r: 120, g: 120, b: 120 };
       // Dots sitting behind copy are pushed further down so they never
       // compete with the text for attention.
-      const ALPHA_OPEN = 0.69;
-      const ALPHA_TEXT = 0.2;
+      const ALPHA_OPEN = 0.86;
+      const ALPHA_TEXT = 0.25;
       const TEXT_SEL = "h1, h2, h3, p, code, li, .index, .stat-label, .card-name, .meta, .pui-chip, .lang-btn, .switch-label, .brand, .nav-links a, .repo-meta";
 
       let vw = 0;
@@ -865,31 +899,54 @@ export function renderLandingPage(profile, liveRepos = null) {
         canvas.height = vh * dpr;
         ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
+        // The field is laid out once across the whole document (not just one
+        // viewport-full, re-tiled on scroll), so each row's jitter is unique
+        // and scrolling reveals new randomness instead of the same pattern
+        // looping every GRID pixels.
+        const docH = Math.max(document.documentElement.scrollHeight, vh);
         dots = [];
         maskCols = Math.ceil(vw / GRID) + 1;
-        maskRows = Math.ceil(vh / GRID) + 1;
+        maskRows = Math.ceil(docH / GRID) + 1;
         mask = new Uint8Array(maskCols * maskRows);
+        // Jittered off the grid (not a pure random scatter) so the text mask
+        // lookup by cell still lines up: each dot wanders within its own
+        // cell instead of landing anywhere on screen.
+        const JITTER = GRID * 0.38;
         for (let y = 0; y < maskRows; y++) {
           for (let x = 0; x < maskCols; x++) {
-            dots.push({ gx: x, gy: y, x: x * GRID, y: y * GRID, pull: 0 });
+            dots.push({
+              gx: x,
+              gy: y,
+              // Document-space position; paint() subtracts scrollY each frame.
+              x: x * GRID + (Math.random() * 2 - 1) * JITTER,
+              y: y * GRID + (Math.random() * 2 - 1) * JITTER,
+              pull: 0,
+              // Own phase and speed so the idle drift below isn't a single
+              // wave moving across the field, just quiet independent wander.
+              phase: Math.random() * Math.PI * 2,
+              speed: 0.00025 + Math.random() * 0.00025,
+            });
           }
         }
         markText();
       }
 
-      // Rasterise the on-screen text boxes into the dot grid so each dot
-      // knows whether it is sitting under copy.
+      // Rasterise the text boxes into the dot grid (document space) so each
+      // dot knows whether it is sitting under copy.
       function markText() {
         if (!mask.length) return;
         mask.fill(0);
         const pad = 6;
+        const scrollY = window.scrollY;
         for (const el of document.querySelectorAll(TEXT_SEL)) {
           const r = el.getBoundingClientRect();
-          if (!r.width || !r.height || r.bottom < 0 || r.top > vh) continue;
+          if (!r.width || !r.height) continue;
+          const top = r.top + scrollY;
+          const bottom = r.bottom + scrollY;
           const x0 = Math.max(0, Math.floor((r.left - pad) / GRID));
           const x1 = Math.min(maskCols - 1, Math.ceil((r.right + pad) / GRID));
-          const y0 = Math.max(0, Math.floor((r.top - pad) / GRID));
-          const y1 = Math.min(maskRows - 1, Math.ceil((r.bottom + pad) / GRID));
+          const y0 = Math.max(0, Math.floor((top - pad) / GRID));
+          const y1 = Math.min(maskRows - 1, Math.ceil((bottom + pad) / GRID));
           for (let y = y0; y <= y1; y++) {
             for (let x = x0; x <= x1; x++) mask[y * maskCols + x] = 1;
           }
@@ -917,26 +974,19 @@ export function renderLandingPage(profile, liveRepos = null) {
       }, { passive: true });
       document.addEventListener("pointerleave", () => { pointer.inside = false; });
 
-      let lastShift = null;
+      // Idle amplitude of the ambient wander, in px. Kept tiny on purpose:
+      // just enough that the field doesn't read as a static image.
+      const DRIFT_AMP = 1.4;
 
-      function paint() {
+      function paint(now) {
         ctx.clearRect(0, 0, vw, vh);
         const open = new Path2D();
         const dim = new Path2D();
-        let settled = true;
-
-        // The canvas is fixed, so a static grid reads as the page sliding over
-        // a wall of dots. Shifting the field by the scroll position modulo the
-        // grid pitch makes it travel with the content, and because the pattern
-        // repeats every GRID pixels the loop is seamless.
-        const shift = -(window.scrollY % GRID);
-        if (shift !== lastShift) {
-          lastShift = shift;
-          settled = false;
-        }
+        const scrollY = window.scrollY;
 
         for (const d of dots) {
-          const baseY = d.y + shift;
+          const baseY = d.y - scrollY;
+          if (baseY < -GRID || baseY > vh + GRID) continue;
           const dx = pointer.x - d.x;
           const dy = pointer.y - baseY;
           const dist = Math.hypot(dx, dy);
@@ -947,10 +997,10 @@ export function renderLandingPage(profile, liveRepos = null) {
             target = n * n * (3 - 2 * n); // smoothstep
           }
           d.pull += (target - d.pull) * EASE;
-          if (d.pull > 0.002) settled = false;
 
-          let px = d.x;
-          let py = baseY;
+          const wt = now * d.speed + d.phase;
+          let px = d.x + Math.sin(wt) * DRIFT_AMP;
+          let py = baseY + Math.cos(wt * 0.85) * DRIFT_AMP;
           if (d.pull > 0.002 && dist > 0.001) {
             // Capped at the radius so a distant pointer can never scale
             // the displacement without bound.
@@ -959,10 +1009,7 @@ export function renderLandingPage(profile, liveRepos = null) {
             py += (dy / dist) * move;
           }
 
-          // The text mask lives in viewport space, so look it up by where the
-          // dot actually lands rather than by its unshifted row.
-          const gy = Math.min(maskRows - 1, Math.max(0, Math.round(baseY / GRID)));
-          const path = mask[gy * maskCols + d.gx] === 1 ? dim : open;
+          const path = mask[d.gy * maskCols + d.gx] === 1 ? dim : open;
           path.moveTo(px + DOT_R, py);
           path.arc(px, py, DOT_R, 0, Math.PI * 2);
         }
@@ -972,43 +1019,21 @@ export function renderLandingPage(profile, liveRepos = null) {
         ctx.fill(open);
         ctx.fillStyle = "rgba(" + rgb + "," + ALPHA_TEXT + ")";
         ctx.fill(dim);
-        return settled;
       }
 
       if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-        paint();
+        paint(0);
         return;
       }
 
-      // Idle the loop once the field has settled, and wake it on interaction,
-      // so a static page costs nothing per frame.
-      let running = false;
-      let idleFrames = 0;
-
-      function loop() {
-        const settled = paint();
-        if (settled && !pointer.inside) {
-          if (++idleFrames > 3) {
-            running = false;
-            return;
-          }
-        } else {
-          idleFrames = 0;
-        }
+      // The idle drift means the field never truly settles, so the loop just
+      // runs continuously instead of sleeping between interactions.
+      function loop(now) {
+        paint(now);
         requestAnimationFrame(loop);
       }
+      requestAnimationFrame(loop);
 
-      function wake() {
-        if (running) return;
-        running = true;
-        idleFrames = 0;
-        requestAnimationFrame(loop);
-      }
-
-      window.addEventListener("pointermove", wake, { passive: true });
-      window.addEventListener("scroll", wake, { passive: true });
-      window.addEventListener("resize", wake);
-      wake();
     })();
 
     (function () {
@@ -1273,32 +1298,42 @@ export function renderLandingPage(profile, liveRepos = null) {
     })();
 
     // Stagger each group so a section resolves in sequence, not all at once.
-    const revealIo = new IntersectionObserver((entries, obs) => {
+    // Re-plays every time: the element resets when it leaves view so the
+    // same reveal happens again on every scroll past it, not just the first.
+    const revealIo = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
         const el = entry.target;
+        if (!entry.isIntersecting) {
+          el.classList.remove("in");
+          return;
+        }
         const siblings = [...(el.parentElement?.children || [])].filter((n) => n.classList.contains("reveal"));
         el.style.transitionDelay = Math.min(siblings.indexOf(el), 6) * 60 + "ms";
         el.classList.add("in");
-        obs.unobserve(el);
       });
     }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
     document.querySelectorAll(".reveal").forEach((el) => revealIo.observe(el));
 
     const countIo = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
         const el = entry.target;
+        if (!entry.isIntersecting) {
+          delete el.dataset.counting;
+          return;
+        }
+        if (el.dataset.counting) return;
+        el.dataset.counting = "1";
         const target = parseInt(el.dataset.count, 10);
+        el.textContent = "0";
         const start = performance.now();
         const dur = 1100;
         function step(now) {
+          if (!el.dataset.counting) return;
           const p = Math.min(1, (now - start) / dur);
           el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3)));
           if (p < 1) requestAnimationFrame(step);
         }
         requestAnimationFrame(step);
-        countIo.unobserve(el);
       });
     }, { threshold: 0.5 });
     document.querySelectorAll(".num").forEach((el) => countIo.observe(el));
@@ -1308,11 +1343,13 @@ export function renderLandingPage(profile, liveRepos = null) {
     });
 
     const langButtons = document.querySelectorAll(".lang-btn");
+    const resumeLink = document.getElementById("resume-link");
     function setLang(lang) {
       document.documentElement.lang = lang === "en" ? "en" : "pt-br";
       document.querySelectorAll("[data-pt][data-en]").forEach((el) => {
         el.textContent = lang === "en" ? el.dataset.en : el.dataset.pt;
       });
+      if (resumeLink) resumeLink.href = "/resume?lang=" + (lang === "en" ? "en" : "pt");
       langButtons.forEach((b) => {
         const active = b.dataset.lang === lang;
         b.classList.toggle("is-active", active);

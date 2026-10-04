@@ -7,6 +7,7 @@ import { dirname, join, extname, resolve, sep } from "path";
 import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
 import { createMcpServer, loadProfile, listGithubRepos } from "./create-server.js";
 import { renderLandingPage } from "./landing-page.js";
+import { streamResumePdf, resumeFilename } from "./resume.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const PUBLIC_DIR = join(__dirname, "..", "public");
@@ -109,6 +110,18 @@ async function handleRequest(req, res) {
     return;
   }
 
+  if (req.method === "GET" && req.url.startsWith("/resume")) {
+    const profile = await loadProfile();
+    const lang = new URL(req.url, "http://localhost").searchParams.get("lang") === "en" ? "en" : "pt";
+    const filename = resumeFilename(profile, lang);
+    res.writeHead(200, {
+      "Content-Type": "application/pdf",
+      "Content-Disposition": `attachment; filename="${filename}.pdf"`,
+    });
+    streamResumePdf(profile, res, lang);
+    return;
+  }
+
   if (req.method === "GET" && (req.url.startsWith("/portrait") || req.url.startsWith("/favicon"))) {
     const served = await servePublicFile(req, res, req.url.slice(1).split("?")[0]);
     if (served) return;
@@ -135,6 +148,13 @@ async function handleRequest(req, res) {
   await transport.handleRequest(req, res);
 }
 
-httpServer.listen(PORT, () => {
-  console.log(`mcp-perfil (HTTP) ouvindo na porta ${PORT}`);
-});
+export { httpServer };
+
+// Only bind a port when this file is run directly (`node src/http-server.js`
+// or `npm run start:http`). Tests import `httpServer` and listen on an
+// ephemeral port themselves, so this must not fire on import.
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  httpServer.listen(PORT, () => {
+    console.log(`mcp-perfil (HTTP) ouvindo na porta ${PORT}`);
+  });
+}

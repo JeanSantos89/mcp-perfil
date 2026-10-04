@@ -15,8 +15,8 @@ export const UI = {
   idxRecs: ["07 · Recomendações", "07 · Recommendations"],
   idxAgents: ["08 · Para agentes", "08 · For agents"],
   heroLabelA: [
-    "Arquitetura de Qualidade & SDET · Projeto os sistemas que mantêm entrega rápida sob controle · Hoje na",
-    "Quality Architecture & SDET · I design the systems that keep fast delivery under control · Currently at",
+    "Arquitetura de Qualidade & SDET · Projeto os sistemas que mantêm entrega rápida sob controle",
+    "Quality Architecture & SDET · I design the systems that keep fast delivery under control",
   ],
   heroAbout: [
     "Aprendi precisão num laboratório e clareza numa sala de aula. Hoje projeto sistemas de qualidade: frameworks de automação, observabilidade em produção e uma base de conhecimento que deixa o time entregar rápido sem voar às cegas.",
@@ -115,6 +115,18 @@ const MONTHS = {
 const PROJECTS = {
   "Servidor MCP (Model Context Protocol) production-grade que atua como camada semântica de conhecimento para times de QA e agentes autônomos de desenvolvimento. Armazena e serve contexto persistente de produto: regras de negócio, fluxos críticos e incidentes históricos.":
     "Production-grade MCP (Model Context Protocol) server acting as a semantic knowledge layer for QA teams and autonomous development agents. Stores and serves persistent product context: business rules, critical flows and historical incidents.",
+  "Servidor MCP que expõe meu perfil profissional como ferramentas consumíveis por agentes de IA, e serve a própria página que você está lendo. Streamable HTTP, dados do GitHub ao vivo com cache, e uma visão \"view as agent\" que devolve o mesmo conteúdo em texto plano.":
+    "MCP server that exposes my professional profile as tools consumable by AI agents, and serves the very page you're reading. Streamable HTTP, live cached GitHub data, and a \"view as agent\" mode that returns the same content as plain text.",
+  "Um gate de qualidade com dois juízes para casos de teste gerados por LLM: um juiz verifica a cobertura dos requisitos, o outro verifica nomes de função/endpoint alucinados, cada um em um contexto isolado.":
+    "A dual-judge quality gate for LLM-generated test cases: one judge checks requirement coverage, the other checks for hallucinated function/endpoint names, each in an isolated context.",
+  "Laboratório de avaliação de LLM: mede a qualidade de um sistema RAG com DeepEval — fidelidade, métricas de recuperação e detecção de alucinação sobre um golden dataset categorizado.":
+    "LLM evaluation lab: measuring a RAG system's quality with DeepEval: faithfulness, retrieval metrics, and hallucination detection over a categorized golden dataset.",
+  "Quatro ferramentas pequenas para testes que passam sem provar nada: requests presos em pending, testes destrutivos compartilhando sessão, asserções que o engine nunca avalia, e passos de setup referenciados por posição.":
+    "Four small tools for tests that pass without proving anything: requests stuck pending, destructive tests sharing a session, assertions the engine never evaluates, and setup steps referenced by position.",
+  "Um workflow de engenharia de qualidade construído inteiramente como configuração de agentes: um slash command, quatro skills e seis subagentes que levam um ticket dos links até a revisão de produto. Recusa-se a inventar contexto, recusa-se a declarar um pass não verificado, e para para toda decisão humana. Complementar ao QA-memory.":
+    "A quality engineering workflow built entirely as agent configuration: one slash command, four skills, and six subagents that carry a ticket from links to product review. Refuses to invent context, refuses to claim an unverified pass, and stops for every human decision. Companion to QA-memory.",
+  "Sete ferramentas pequenas para flagrar CI que reporta verde sem provar nada: relatórios fabricados, regressões mascaradas por flakiness, fontes desatualizadas, loops de crash, falhas sem alerta e tags de skip podres.":
+    "Seven small tools for catching CI that reports green without proving anything: fabricated reports, flaky-masked regressions, stale sources, crash loops, un-alerted failures, and rotten skip tags.",
   "Projeto de automação E2E com Playwright e TypeScript implementando o padrão Page Object Model (POM). Valida regras de negócio e edge cases de e-commerce (montagem de produtos multi-atributo, gestão de carrinho, validação de limites de input) no ecossistema nopCommerce.":
     "E2E automation project in Playwright and TypeScript implementing the Page Object Model. Validates e-commerce business rules and edge cases (multi-attribute product configuration, cart management, input boundary validation) on the nopCommerce stack.",
   "Projeto de automação E2E com Playwright e TypeScript utilizando POM avançado com locators desacoplados. Valida uma aplicação de e-commerce dinâmica em React, com foco em fluxos stateful, filtros web, contadores de carrinho e asserções financeiras/matemáticas precisas.":
@@ -228,14 +240,33 @@ const LOCATIONS = {
   "Ponta Grossa, Paraná, Brasil": "Ponta Grossa, Paraná, Brazil",
 };
 
+const TERMS = {
+  "Testes exploratórios": "Exploratory testing",
+  "Planejamento de testes": "Test planning",
+  "Teste de caixa branca": "White-box testing",
+  "Regressão": "Regression",
+  "Microsserviços": "Microservices",
+  "testes de contrato": "contract testing",
+  "Capacidade de processo": "Process capability",
+  "Docência": "Teaching",
+  "Gestão de Riscos": "Risk management",
+  "Pacote Office": "MS Office suite",
+};
+
 const TITLES = {
   "QA / SDET com foco em automação inteligente e engenharia de avaliação de LLMs":
     "QA / SDET focused on intelligent automation and LLM evaluation engineering",
+  "QA / SDET com foco em automação inteligente e engenharia de avaliação de LLMs. Único QA de um time de 6 engenheiros em produto de location intelligence com alto volume de entregas, construindo frameworks de automação do zero em Playwright e TypeScript. Reduzi ciclos de regressão de ~1 dia manual para 10 min e codifiquei 409 regras de negócio para validação preditiva com IA (MCP, RAG, DeepEval). Inglês C1. Aberto a vagas 100% remotas, nacionais e internacionais.":
+    "QA / SDET focused on intelligent automation and LLM evaluation engineering. The sole QA on a 6-engineer team shipping a location-intelligence product at high volume, building automation frameworks from scratch in Playwright and TypeScript. Cut regression cycles from ~1 manual day to 10 min and encoded 409 business rules for AI-driven predictive validation (MCP, RAG, DeepEval). English C1. Open to 100% remote roles, domestic and international.",
+  "Tecnólogo em Análise e Desenvolvimento de Sistemas":
+    "Associate Degree in Systems Analysis and Development",
+  "Ensino Médio Técnico Integrado em Química":
+    "Technical High School Diploma in Chemistry",
 };
 
 PROJECTS[QA_MEMORY_PT] = QA_MEMORY_EN;
 
-const ALL = { ...ROLES, ...PRODUCTS_COPY, ...CATEGORIES, ...PROJECTS, ...RECOMMENDATIONS, ...BULLETS, ...ROLE_TITLES, ...LOCATIONS, ...TITLES };
+const ALL = { ...ROLES, ...PRODUCTS_COPY, ...CATEGORIES, ...PROJECTS, ...RECOMMENDATIONS, ...BULLETS, ...ROLE_TITLES, ...LOCATIONS, ...TITLES, ...TERMS };
 
 /** English pair for a Portuguese string, falling back to the original. */
 export function en(pt) {
