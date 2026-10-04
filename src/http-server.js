@@ -3,7 +3,7 @@ import { createServer } from "http";
 import { createReadStream } from "fs";
 import { stat } from "fs/promises";
 import { fileURLToPath } from "url";
-import { dirname, join, extname } from "path";
+import { dirname, join, extname, resolve, sep } from "path";
 import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
 import { createMcpServer, loadProfile, listGithubRepos } from "./create-server.js";
 import { renderLandingPage } from "./landing-page.js";
@@ -15,7 +15,14 @@ const PORT = process.env.PORT || 3000;
 const MIME = { ".mp4": "video/mp4", ".webm": "video/webm", ".webp": "image/webp", ".png": "image/png", ".jpg": "image/jpeg" };
 
 async function servePublicFile(req, res, filename) {
-  const filePath = join(PUBLIC_DIR, filename);
+  const filePath = resolve(PUBLIC_DIR, filename);
+  // Reject anything that escapes the public dir (e.g. "../../src/server.js")
+  // before it ever touches the filesystem.
+  if (filePath !== PUBLIC_DIR && !filePath.startsWith(PUBLIC_DIR + sep)) {
+    res.writeHead(400);
+    res.end("Bad request");
+    return true;
+  }
   let fileStat;
   try {
     fileStat = await stat(filePath);
