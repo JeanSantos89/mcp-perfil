@@ -1,7 +1,7 @@
 {
   "name": "mcp-perfil",
   "version": "1.0.0",
-  "description": "Servidor MCP que expõe informações do meu perfil profissional",
+  "description": "MCP server that exposes my professional profile information",
   "type": "module",
   "main": "src/server.js",
   "bin": {
