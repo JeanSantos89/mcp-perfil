@@ -43,7 +43,7 @@ async function githubFetch(path) {
   return data;
 }
 
-async function listGithubRepos(usuario) {
+export async function listGithubRepos(usuario) {
   const repos = await githubFetch(
     `/users/${usuario}/repos?per_page=100&sort=updated`
   );

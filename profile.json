@@ -11,40 +11,174 @@
     "site": ""
   },
   "habilidades": {
-    "ia_aplicada_qa": ["AI Agents", "MCP Servers", "RAG", "AI Evals (LLM)", "DeepEval", "auto-healing", "prompt engineering", "Chrome DevTools Protocol"],
-    "automacao_de_testes": ["Playwright", "Cypress", "Appium", "Maestro", "Gherkin", "Cucumber", "BDD", "E2E", "Regressão", "Shift-Left"],
-    "linguagens": ["TypeScript", "JavaScript", "Java", "Python", "JUnit", "Mockito", "Jest"],
-    "backend_apis": ["Microsserviços", "testes de contrato", "Postman", "Swagger", "PostgreSQL", "MongoDB", "SQL"],
-    "cicd_observabilidade": ["GitHub Actions", "GitLab CI/CD", "Git", "Grafana", "Firebase Crashlytics", "Jira", "Qase", "Scrum", "Kanban"],
-    "outras": ["Capacidade de processo", "Pacote Office", "Power Automate", "VBA", "Docência", "LGPD", "Gestão de Riscos"]
+    "ia_aplicada_qa": [
+      "AI Agents",
+      "MCP Servers",
+      "RAG",
+      "AI Evals (LLM)",
+      "DeepEval",
+      "auto-healing",
+      "prompt engineering",
+      "Chrome DevTools Protocol"
+    ],
+    "automacao_de_testes": [
+      "Playwright",
+      "Cypress",
+      "Appium",
+      "Maestro",
+      "Gherkin",
+      "Cucumber",
+      "BDD",
+      "E2E",
+      "Regressão",
+      "Shift-Left"
+    ],
+    "linguagens": [
+      "TypeScript",
+      "JavaScript",
+      "Java",
+      "Python",
+      "JUnit",
+      "Mockito",
+      "Jest"
+    ],
+    "backend_apis": [
+      "Microsserviços",
+      "testes de contrato",
+      "Postman",
+      "Swagger",
+      "PostgreSQL",
+      "MongoDB",
+      "SQL"
+    ],
+    "cicd_observabilidade": [
+      "GitHub Actions",
+      "GitLab CI/CD",
+      "Git",
+      "Grafana",
+      "Firebase Crashlytics",
+      "Jira",
+      "Qase",
+      "Scrum",
+      "Kanban"
+    ],
+    "outras": [
+      "Capacidade de processo",
+      "Pacote Office",
+      "Power Automate",
+      "VBA",
+      "Docência",
+      "LGPD",
+      "Gestão de Riscos"
+    ]
   },
   "preferencias_vaga": {
-    "cargos": ["Engenheiro QA", "Desenvolvedor de software em teste", "Analista de testes", "Analista de teste/QA", "Analista de teste de automação"],
-    "tipos_localidade": ["Remoto"],
-    "localidades": ["Brasil"],
+    "cargos": [
+      "Engenheiro QA",
+      "Desenvolvedor de software em teste",
+      "Analista de testes",
+      "Analista de teste/QA",
+      "Analista de teste de automação"
+    ],
+    "tipos_localidade": [
+      "Remoto"
+    ],
+    "localidades": [
+      "Brasil"
+    ],
     "data_inicio": "Imediatamente, estou me candidatando agora",
-    "tipos_emprego": ["Tempo integral"]
+    "tipos_emprego": [
+      "Tempo integral"
+    ]
   },
-  "principais_competencias": ["Test Automation", "Playwright", "CI/CD", "Inteligência Artificial", "TypeScript"],
+  "principais_competencias": [
+    "Test Automation",
+    "Playwright",
+    "CI/CD",
+    "Inteligência Artificial",
+    "TypeScript"
+  ],
   "competencias_endossadas_linkedin": [
-    "Engenharia da qualidade", "Page Object Model", "Swagger API", "LangGraph", "DeepEval", "PYRIT", "LangFuse",
-    "GuardRails", "Test Automation Frameworks", "Test Engineering", "Segurança de IA", "Testes de segurança",
-    "OWASP", "Capacidade de processo", "Quality Monitoring", "Statistical Process Controls", "Exploratory Testing",
-    "Usability Testing", "Geração aumentada de recuperação (RAG)", "LLMs locais", "Test Assurance",
-    "Software Quality", "Protocolo de contexto de modelo (MCP)", "Big data", "Claude", "Agentes de IA",
-    "IA generativa", "Garantia de qualidade de software", "Cucumber", "Gherkin", "Python (Programming Language)",
-    "Teste de dispositivos móveis", "Appium", "Robot Framework", "Testes exploratórios",
-    "Teste de caixa branca", "Teste de software", "Planejamento de testes", "Casos de teste", "Testes ágeis",
-    "Metodologias ágeis e em cascata", "Teste de caixa-preta", "Cypress.io", "PostgreSQL", "Manual Testing",
-    "Teste de regressão", "Acompanhamento de bugs", "GitHub Actions", "Testes de API", "Postman API",
-    "Automação de testes", "Scrum", "Pandas", "GitHub", "WebDriver Selenium", "Automação de processos",
-    "Metodologias Agile", "Gestão de dados", "Coleta de dados", "LGPD", "Dados sensíveis", "Dashboards",
-    "ISO 17025:2017", "NBR ISO 17043:2011", "PowerBi", "JavaScript", "Docência", "Pacote Office", "Análise de dados",
+    "Engenharia da qualidade",
+    "Page Object Model",
+    "Swagger API",
+    "LangGraph",
+    "DeepEval",
+    "PYRIT",
+    "LangFuse",
+    "GuardRails",
+    "Test Automation Frameworks",
+    "Test Engineering",
+    "Segurança de IA",
+    "Testes de segurança",
+    "OWASP",
+    "Capacidade de processo",
+    "Quality Monitoring",
+    "Statistical Process Controls",
+    "Exploratory Testing",
+    "Usability Testing",
+    "Geração aumentada de recuperação (RAG)",
+    "LLMs locais",
+    "Test Assurance",
+    "Software Quality",
+    "Protocolo de contexto de modelo (MCP)",
+    "Big data",
+    "Claude",
+    "Agentes de IA",
+    "IA generativa",
+    "Garantia de qualidade de software",
+    "Cucumber",
+    "Gherkin",
+    "Python (Programming Language)",
+    "Teste de dispositivos móveis",
+    "Appium",
+    "Robot Framework",
+    "Testes exploratórios",
+    "Teste de caixa branca",
+    "Teste de software",
+    "Planejamento de testes",
+    "Casos de teste",
+    "Testes ágeis",
+    "Metodologias ágeis e em cascata",
+    "Teste de caixa-preta",
+    "Cypress.io",
+    "PostgreSQL",
+    "Manual Testing",
+    "Teste de regressão",
+    "Acompanhamento de bugs",
+    "GitHub Actions",
+    "Testes de API",
+    "Postman API",
+    "Automação de testes",
+    "Scrum",
+    "Pandas",
+    "GitHub",
+    "WebDriver Selenium",
+    "Automação de processos",
+    "Metodologias Agile",
+    "Gestão de dados",
+    "Coleta de dados",
+    "LGPD",
+    "Dados sensíveis",
+    "Dashboards",
+    "ISO 17025:2017",
+    "NBR ISO 17043:2011",
+    "PowerBi",
+    "JavaScript",
+    "Docência",
+    "Pacote Office",
+    "Análise de dados",
     "Inglês"
   ],
   "idiomas": [
-    { "idioma": "Português", "nivel": "Nativo" },
-    { "idioma": "Inglês", "nivel": "C1" }
+    {
+      "idioma": "Português",
+      "nivel": "Nativo"
+    },
+    {
+      "idioma": "Inglês",
+      "nivel": "C1"
+    }
   ],
   "experiencias": [
     {
@@ -90,7 +224,11 @@
       "inicio": "jan. de 2025",
       "fim": "ago. de 2025",
       "descricao": "Atuação como QA Tester Freelancer focado em Bug Hunting através da plataforma global de testes da Testlio.\n- Mapeamento de Falhas: execução de testes exploratórios e funcionais em aplicações de alta escala para identificação e isolamento de bugs críticos de sistema.\n- Reporte Técnico: documentação detalhada de defeitos (com passos de reprodução, logs e evidências) em inglês, garantindo a rastreabilidade para o time de engenharia.",
-      "tecnologias": ["Testes exploratórios", "Planejamento de testes", "Teste de caixa branca"]
+      "tecnologias": [
+        "Testes exploratórios",
+        "Planejamento de testes",
+        "Teste de caixa branca"
+      ]
     },
     {
       "empresa": "Cooperativa Agrária Agroindustrial",
@@ -98,7 +236,11 @@
       "inicio": "set. de 2023",
       "fim": "mar. de 2025",
       "descricao": "Otimizei processos operacionais e fluxos de trabalho, oferecendo suporte ao desenvolvimento e à automação de sistemas laboratoriais, com foco em qualidade de documentação, confiabilidade dos sistemas e comunicação entre equipes técnicas e executivas.\n- Automação de fluxos de trabalho com redução de tempo de até 93,75%, via Excel, Power Automate e VBA.\n- Padronização e conformidade de documentação técnica seguindo ISO/IEC 17025 e NBR ISO 17043.\n- Identificação e documentação de falhas (bug hunting) e execução de casos de teste, apoiando a validação funcional das soluções.",
-      "tecnologias": ["Excel", "Power Automate", "VBA"]
+      "tecnologias": [
+        "Excel",
+        "Power Automate",
+        "VBA"
+      ]
     },
     {
       "empresa": "Senac PR",
@@ -106,7 +248,13 @@
       "inicio": "fev. de 2023",
       "fim": "set. de 2023",
       "descricao": "Ministrei aulas práticas de diversas ferramentas de software e hardware, preparando alunos de diferentes níveis para o mercado de trabalho através de abordagens dinâmicas e foco na aplicação profissional.\n- Aulas práticas de Excel, VBA, Power BI e ferramentas de hardware/software, com adaptação de conteúdo por nível técnico.\n- Preparo de alunos para o mercado de trabalho, com foco em aplicabilidade prática.",
-      "tecnologias": ["Excel", "VBA", "Power BI", "Docência", "LGPD"]
+      "tecnologias": [
+        "Excel",
+        "VBA",
+        "Power BI",
+        "Docência",
+        "LGPD"
+      ]
     }
   ],
   "formacao": [
@@ -126,94 +274,282 @@
     }
   ],
   "certificacoes": [
-    { "nome": "AI Security Fundamentals – LLM Threats & OWASP 2026", "instituicao": "Packt", "emissao": "jun. de 2026", "credencial": "BS1KZZST6HMZ" },
-    { "nome": "Six Sigma Green Belt Specialization", "instituicao": "Kennesaw State University", "emissao": "jun. de 2026", "credencial": "0US3KBNW7UAM" },
-    { "nome": "IBM RAG and Agentic AI Specialization", "instituicao": "IBM", "emissao": "jun. de 2026", "credencial": "5WVN4N2XW5S4" },
-    { "nome": "Claude 101", "instituicao": "Anthropic", "emissao": "mar. de 2026", "credencial": "2yc5rg8yrhj7" },
-    { "nome": "Generative AI Learning Path – Google Cloud", "instituicao": "Google Cloud Skills Boost", "emissao": "mar. de 2026", "credencial": "22741390" },
-    { "nome": "Automation and Modern Testing Tools", "instituicao": "Board", "emissao": "dez. de 2025", "credencial": "DSAWB4H233NP" },
-    { "nome": "Advanced Quality and Capstone Project", "instituicao": "Board", "emissao": "out. de 2025", "credencial": null },
-    { "nome": "Engineering Practices for Building Quality Software", "instituicao": "University of Minnesota", "emissao": "nov. de 2025", "credencial": "IHC40AEB9QMF" },
-    { "nome": "AWS Cloud Technical Essentials", "instituicao": "Amazon Web Services (AWS)", "emissao": "dez. de 2025", "credencial": null },
-    { "nome": "Robot Framework e Appium para Android e iOS", "instituicao": "Udemy", "emissao": "jun. de 2025", "credencial": "UC-113e933b-4d88-4e16-8aba-83ebb120c58a" },
-    { "nome": "Programa Desenvolve", "instituicao": "Grupo Boticário", "emissao": "mai. de 2025", "credencial": null },
-    { "nome": "The Complete 2025 Software Testing Bootcamp", "instituicao": "Udemy", "emissao": "jun. de 2025", "credencial": "UC-8ec2a9a0-694e-49c9-94bd-4f87aab29c74" },
-    { "nome": "Intermediate Selenium WebDriver and Automation", "instituicao": "Packt", "emissao": "jun. de 2025", "credencial": null },
-    { "nome": "EF SET English Certificate 77/100 (C2 Proficient)", "instituicao": "EF", "emissao": "jul. de 2025", "credencial": null },
-    { "nome": "Scrum Fundamentals Certified", "instituicao": "VMEdu.com", "emissao": "jul. de 2025", "credencial": "1076318" },
-    { "nome": "ABNT NBR ISO IEC 17025:2017", "instituicao": "Evidência Consultoria Treinamento", "emissao": "jan. de 2025", "credencial": null },
-    { "nome": "Análise de Mercado", "instituicao": "Sistema OCB", "emissao": "ago. de 2024", "credencial": "070986ad-c664-492c-a168-74136db08eaf" },
-    { "nome": "LGPD: o que eu preciso saber?", "instituicao": "Sistema OCB", "emissao": "ago. de 2024", "credencial": "1afc7445-8854-456e-8bd6-072d3419bdce" },
-    { "nome": "Power BI Completo - Do básico ao Avançado", "instituicao": "Udemy", "emissao": "ago. de 2024", "credencial": "UC-a01c787a-f8d8-42fb-9c23-61b77a1f9910" },
-    { "nome": "Domain Driven Design", "instituicao": "UTFPR", "emissao": "out. de 2022", "credencial": "9904692.5548181.180747.7.51325866304044017377" },
-    { "nome": "EF SET English Certificate 72/100 (C2 Proficient)", "instituicao": "EF", "emissao": "out. de 2023", "credencial": null }
+    {
+      "nome": "AI Security Fundamentals – LLM Threats & OWASP 2026",
+      "instituicao": "Packt",
+      "emissao": "jun. de 2026",
+      "credencial": "BS1KZZST6HMZ"
+    },
+    {
+      "nome": "Six Sigma Green Belt Specialization",
+      "instituicao": "Kennesaw State University",
+      "emissao": "jun. de 2026",
+      "credencial": "0US3KBNW7UAM"
+    },
+    {
+      "nome": "IBM RAG and Agentic AI Specialization",
+      "instituicao": "IBM",
+      "emissao": "jun. de 2026",
+      "credencial": "5WVN4N2XW5S4"
+    },
+    {
+      "nome": "Claude 101",
+      "instituicao": "Anthropic",
+      "emissao": "mar. de 2026",
+      "credencial": "2yc5rg8yrhj7"
+    },
+    {
+      "nome": "Generative AI Learning Path – Google Cloud",
+      "instituicao": "Google Cloud Skills Boost",
+      "emissao": "mar. de 2026",
+      "credencial": "22741390"
+    },
+    {
+      "nome": "Automation and Modern Testing Tools",
+      "instituicao": "Board",
+      "emissao": "dez. de 2025",
+      "credencial": "DSAWB4H233NP"
+    },
+    {
+      "nome": "Advanced Quality and Capstone Project",
+      "instituicao": "Board",
+      "emissao": "out. de 2025",
+      "credencial": null
+    },
+    {
+      "nome": "Engineering Practices for Building Quality Software",
+      "instituicao": "University of Minnesota",
+      "emissao": "nov. de 2025",
+      "credencial": "IHC40AEB9QMF"
+    },
+    {
+      "nome": "AWS Cloud Technical Essentials",
+      "instituicao": "Amazon Web Services (AWS)",
+      "emissao": "dez. de 2025",
+      "credencial": null
+    },
+    {
+      "nome": "Robot Framework e Appium para Android e iOS",
+      "instituicao": "Udemy",
+      "emissao": "jun. de 2025",
+      "credencial": "UC-113e933b-4d88-4e16-8aba-83ebb120c58a"
+    },
+    {
+      "nome": "Programa Desenvolve",
+      "instituicao": "Grupo Boticário",
+      "emissao": "mai. de 2025",
+      "credencial": null
+    },
+    {
+      "nome": "The Complete 2025 Software Testing Bootcamp",
+      "instituicao": "Udemy",
+      "emissao": "jun. de 2025",
+      "credencial": "UC-8ec2a9a0-694e-49c9-94bd-4f87aab29c74"
+    },
+    {
+      "nome": "Intermediate Selenium WebDriver and Automation",
+      "instituicao": "Packt",
+      "emissao": "jun. de 2025",
+      "credencial": null
+    },
+    {
+      "nome": "EF SET English Certificate 77/100 (C2 Proficient)",
+      "instituicao": "EF",
+      "emissao": "jul. de 2025",
+      "credencial": null
+    },
+    {
+      "nome": "Scrum Fundamentals Certified",
+      "instituicao": "VMEdu.com",
+      "emissao": "jul. de 2025",
+      "credencial": "1076318"
+    },
+    {
+      "nome": "ABNT NBR ISO IEC 17025:2017",
+      "instituicao": "Evidência Consultoria Treinamento",
+      "emissao": "jan. de 2025",
+      "credencial": null
+    },
+    {
+      "nome": "Análise de Mercado",
+      "instituicao": "Sistema OCB",
+      "emissao": "ago. de 2024",
+      "credencial": "070986ad-c664-492c-a168-74136db08eaf"
+    },
+    {
+      "nome": "LGPD: o que eu preciso saber?",
+      "instituicao": "Sistema OCB",
+      "emissao": "ago. de 2024",
+      "credencial": "1afc7445-8854-456e-8bd6-072d3419bdce"
+    },
+    {
+      "nome": "Power BI Completo - Do básico ao Avançado",
+      "instituicao": "Udemy",
+      "emissao": "ago. de 2024",
+      "credencial": "UC-a01c787a-f8d8-42fb-9c23-61b77a1f9910"
+    },
+    {
+      "nome": "Domain Driven Design",
+      "instituicao": "UTFPR",
+      "emissao": "out. de 2022",
+      "credencial": "9904692.5548181.180747.7.51325866304044017377"
+    },
+    {
+      "nome": "EF SET English Certificate 72/100 (C2 Proficient)",
+      "instituicao": "EF",
+      "emissao": "out. de 2023",
+      "credencial": null
+    }
   ],
   "projetos": [
+    {
+      "nome": "mcp-perfil",
+      "descricao": "Servidor MCP que expõe meu perfil profissional como ferramentas consumíveis por agentes de IA, e serve a própria página que você está lendo. Streamable HTTP, dados do GitHub ao vivo com cache, e uma visão \"view as agent\" que devolve o mesmo conteúdo em texto plano.",
+      "link": "https://github.com/JeanSantos89/mcp-perfil",
+      "tecnologias": [
+        "MCP Server",
+        "Node.js",
+        "JavaScript",
+        "Streamable HTTP",
+        "Canvas API"
+      ],
+      "categoria": "IA & agentes",
+      "status": "em andamento"
+    },
     {
       "nome": "test-quality-judge",
       "descricao": "A dual-judge quality gate for LLM-generated test cases: one judge checks requirement coverage, the other checks for hallucinated function/endpoint names, each in an isolated context.",
       "link": "https://github.com/JeanSantos89/test-quality-judge",
-      "tecnologias": ["Python"]
+      "tecnologias": [
+        "Python"
+      ],
+      "categoria": "IA & agentes",
+      "status": "pronto"
     },
     {
       "nome": "llm-eval-engineering",
-      "descricao": "LLM evaluation lab: measuring a RAG system's quality with DeepEval — faithfulness, retrieval metrics, and hallucination detection over a categorized golden dataset.",
+      "descricao": "LLM evaluation lab: measuring a RAG system's quality with DeepEval: faithfulness, retrieval metrics, and hallucination detection over a categorized golden dataset.",
       "link": "https://github.com/JeanSantos89/llm-eval-engineering",
-      "tecnologias": ["DeepEval", "RAG", "Python", "LangGraph"]
+      "tecnologias": [
+        "DeepEval",
+        "RAG",
+        "Python",
+        "LangGraph"
+      ],
+      "categoria": "IA & agentes",
+      "status": "pronto"
     },
     {
       "nome": "playwright-test-kit",
       "descricao": "Four small tools for tests that pass without proving anything: requests stuck pending, destructive tests sharing a session, assertions the engine never evaluates, and setup steps referenced by position.",
       "link": "https://github.com/JeanSantos89/playwright-test-kit",
-      "tecnologias": ["TypeScript", "Playwright"]
+      "tecnologias": [
+        "TypeScript",
+        "Playwright"
+      ],
+      "categoria": "Automação de testes",
+      "status": "pronto"
     },
     {
       "nome": "QE-agents-workflow",
-      "descricao": "A quality engineering workflow built entirely as agent configuration: one slash command, one skill, and seven subagents that carry a ticket from links to product review. Refuses to invent context, refuses to claim an unverified pass, and stops for every human decision. Companion to QA-memory.",
+      "descricao": "A quality engineering workflow built entirely as agent configuration: one slash command, four skills, and six subagents that carry a ticket from links to product review. Refuses to invent context, refuses to claim an unverified pass, and stops for every human decision. Companion to QA-memory.",
       "link": "https://github.com/JeanSantos89/QE-agents-workflow",
-      "tecnologias": ["AI Agents", "MCP", "Claude Code", "Playwright", "Prompt Engineering"]
+      "tecnologias": [
+        "AI Agents",
+        "MCP",
+        "Claude Code",
+        "Playwright",
+        "Prompt Engineering"
+      ],
+      "categoria": "IA & agentes",
+      "status": "pronto"
     },
     {
       "nome": "ci-reliability-toolkit",
       "descricao": "Seven small tools for catching CI that reports green without proving anything: fabricated reports, flaky-masked regressions, stale sources, crash loops, un-alerted failures, and rotten skip tags.",
       "link": "https://github.com/JeanSantos89/ci-reliability-toolkit",
-      "tecnologias": ["TypeScript", "Teste de regressão"]
+      "tecnologias": [
+        "TypeScript",
+        "Teste de regressão"
+      ],
+      "categoria": "CI & confiabilidade",
+      "status": "pronto"
     },
     {
       "nome": "QA-memory",
-      "descricao": "Servidor MCP (Model Context Protocol) production-grade que atua como camada semântica de conhecimento para times de QA e agentes autônomos de desenvolvimento. Armazena e serve contexto persistente de produto — regras de negócio, fluxos críticos e incidentes históricos.",
+      "descricao": "Base de conhecimento de QA em markdown versionado, lida pelo assistente de IA. Sem servidor, sem banco e sem chave de LLM: cada comportamento do produto vira um arquivo com suas regras, ligado por wikilinks a áreas e incidentes. O conhecimento acumula em vez de evaporar na rotatividade, e os dados sensíveis nunca saem da máquina.",
       "link": "https://github.com/JeanSantos89/QA-memory",
-      "tecnologias": ["MCP Server", "TypeScript", "Python", "RAG"]
+      "tecnologias": [
+        "Markdown",
+        "Git",
+        "Claude Code",
+        "RAG",
+        "Knowledge graph"
+      ],
+      "categoria": "IA & agentes",
+      "status": "pronto"
     },
     {
       "nome": "E2E-ecommerce-validation-framework",
       "descricao": "Projeto de automação E2E com Playwright e TypeScript implementando o padrão Page Object Model (POM). Valida regras de negócio e edge cases de e-commerce (montagem de produtos multi-atributo, gestão de carrinho, validação de limites de input) no ecossistema nopCommerce.",
       "link": "https://github.com/JeanSantos89/E2E-ecommerce-validation-framework",
-      "tecnologias": ["Playwright", "TypeScript", "POM"]
+      "tecnologias": [
+        "Playwright",
+        "TypeScript",
+        "POM"
+      ],
+      "categoria": "Automação de testes",
+      "status": "pronto"
     },
     {
       "nome": "e2e-ecommerce-playwright",
       "descricao": "Projeto de automação E2E com Playwright e TypeScript utilizando POM avançado com locators desacoplados. Valida uma aplicação de e-commerce dinâmica em React, com foco em fluxos stateful, filtros web, contadores de carrinho e asserções financeiras/matemáticas precisas.",
       "link": "https://github.com/JeanSantos89/e2e-ecommerce-playwright",
-      "tecnologias": ["Playwright", "TypeScript", "React"]
+      "tecnologias": [
+        "Playwright",
+        "TypeScript",
+        "React"
+      ],
+      "categoria": "Automação de testes",
+      "status": "pronto"
     },
     {
       "nome": "Streaming-typescript-playwright",
       "descricao": "Framework de automação E2E enterprise de alta escalabilidade, construído com Playwright e TypeScript para o ecossistema TMDB. Demonstra padrões arquiteturais avançados, gestão robusta de estado e CI/CD, simulando jornadas reais como autenticação multi-estado, paginação assíncrona e operações CRUD stateful.",
       "link": "https://github.com/JeanSantos89/Streaming-typescript-playwright",
-      "tecnologias": ["Playwright", "TypeScript", "CI/CD"]
+      "tecnologias": [
+        "Playwright",
+        "TypeScript",
+        "CI/CD"
+      ],
+      "categoria": "Automação de testes",
+      "status": "pronto"
     },
     {
       "nome": "E2E-Quality-Pipeline",
       "descricao": "Repositório de automação QA shift-left com Python, Pytest e Playwright para fluxos de e-commerce (SauceDemo). Conecta gestão de testes e execução contínua, validando transações core (Auth, Carrinho) com especificações Gherkin, templates padronizados de bug e GitHub Actions automatizado.",
       "link": "https://github.com/JeanSantos89/E2E-Quality-Pipeline",
-      "tecnologias": ["Python", "Pytest", "Playwright", "Gherkin", "GitHub Actions"]
+      "tecnologias": [
+        "Python",
+        "Pytest",
+        "Playwright",
+        "Gherkin",
+        "GitHub Actions"
+      ],
+      "categoria": "Automação de testes",
+      "status": "pronto"
     },
     {
       "nome": "Appium-Robot-Study",
       "descricao": "Repositório de automação de testes mobile usando Robot Framework e Appium v2. Demonstra testes funcionais end-to-end em aplicações Android reais e simuladas, com estrutura de keywords customizadas, locators de UI (UIAutomator2), geração de logs e verificação de fluxos/tarefas mobile.",
       "link": "https://github.com/JeanSantos89/Appium-Robot-Study",
-      "tecnologias": ["Robot Framework", "Appium", "UIAutomator2"]
+      "tecnologias": [
+        "Robot Framework",
+        "Appium",
+        "UIAutomator2"
+      ],
+      "categoria": "Testes mobile",
+      "status": "pronto"
     }
   ],
   "recomendacoes_recebidas": [
@@ -232,5 +568,31 @@
       "texto": "Tive a oportunidade de trabalhar com Jeanderson e posso afirmar que ele é um profissional de QA extremamente dedicado e detalhista. Durante o período em que colaboramos, ele demonstrou grande capacidade de identificar problemas antes mesmo de chegarem aos usuários finais, contribuindo diretamente para a melhoria da qualidade dos produtos entregues. Além do forte conhecimento em testes funcionais e análise de requisitos, Jeanderson também se destacou pela comunicação clara com desenvolvedores, product managers e demais membros do time, facilitando a resolução rápida de bugs e o aprimoramento contínuo dos processos de qualidade. Seu pensamento crítico, organização e comprometimento com boas práticas de testes fazem dele um grande diferencial em qualquer equipe de desenvolvimento. Recomendo sem sombra de dúvidas o Jeanderson para qualquer equipe que valorize qualidade, responsabilidade e colaboração."
     }
   ],
-  "github_usuario": "JeanSantos89"
+  "github_usuario": "JeanSantos89",
+  "produtos": [
+    {
+      "nome": "QA-memory",
+      "link": "https://github.com/JeanSantos89/QA-memory",
+      "resumo": "Conhecimento de produto em markdown versionado, consultado pelo assistente durante o trabalho real. Sem servidor, sem banco, sem chave de LLM.",
+      "valor": 409,
+      "rotulo": "regras de negócio codificadas",
+      "secundario": "116 comportamentos mapeados, 69 deles P0/P1"
+    },
+    {
+      "nome": "QE-agents-workflow",
+      "link": "https://github.com/JeanSantos89/QE-agents-workflow",
+      "resumo": "Um fluxo de engenharia de qualidade escrito inteiramente como configuração de agente, que leva um ticket dos links até a revisão de produto.",
+      "valor": 6,
+      "rotulo": "subagentes em produção",
+      "secundario": "4 skills, 1 slash command e 3 paradas obrigatórias para decisão humana"
+    },
+    {
+      "nome": "Toolkits de confiabilidade",
+      "link": "https://github.com/JeanSantos89/ci-reliability-toolkit",
+      "resumo": "Ferramentas pequenas e independentes para o mesmo problema: teste e pipeline que passam sem provar nada.",
+      "valor": 11,
+      "rotulo": "ferramentas autônomas publicadas",
+      "secundario": "7 em ci-reliability-toolkit, 4 em playwright-test-kit"
+    }
+  ]
 }
