@@ -102,8 +102,8 @@ async function handleRequest(req, res) {
     return;
   }
 
-  if (req.method === "GET" && req.url.startsWith("/portrait")) {
-    const served = await servePublicFile(req, res, req.url.slice(1));
+  if (req.method === "GET" && (req.url.startsWith("/portrait") || req.url.startsWith("/favicon"))) {
+    const served = await servePublicFile(req, res, req.url.slice(1).split("?")[0]);
     if (served) return;
   }
 
