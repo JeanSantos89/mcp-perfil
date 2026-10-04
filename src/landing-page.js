@@ -509,7 +509,7 @@ export function renderLandingPage(profile, liveRepos = null) {
   @media (max-width: 899px) { .hero-about { margin-top: 20px; font-size: 16px; } }
 
   .install { display: flex; flex-direction: column; gap: 10px; max-width: 560px; margin-top: 36px; }
-  .install [role="tablist"] { align-self: flex-start; display: flex; }
+  .install [role="tablist"] { align-self: flex-start; display: flex; flex-wrap: wrap; row-gap: 6px; }
   .install [role="tablist"] button { font-family: var(--font-mono); font-size: 12px; padding: 6px 14px; border: 1px solid var(--border); background: transparent; color: var(--text-muted); cursor: pointer; margin-left: -1px; transition: color 0.25s ease, background-color 0.25s ease; }
   .install [role="tablist"] button:first-child { margin-left: 0; border-top-left-radius: var(--radius); border-bottom-left-radius: var(--radius); }
   .install [role="tablist"] button:last-child { border-top-right-radius: var(--radius); border-bottom-right-radius: var(--radius); }
@@ -530,7 +530,7 @@ export function renderLandingPage(profile, liveRepos = null) {
   }
   .install-field button { margin-left: auto; }
 
-  .hero-links { display: flex; gap: 16px; margin-top: 28px; }
+  .hero-links { display: flex; flex-wrap: wrap; gap: 12px 16px; margin-top: 28px; }
 
   .hero-portrait {
     position: relative;
