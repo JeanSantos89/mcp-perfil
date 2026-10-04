@@ -32,6 +32,17 @@ async function withServer(fn) {
   }
 }
 
+test("GET /health returns a tiny 200 for keep-alive pingers", async () => {
+  await withServer(async (base) => {
+    const res = await fetch(base + "/health");
+    assert.equal(res.status, 200);
+    const body = await res.text();
+    // Pingers like cron-job.org reject oversized responses, which is exactly
+    // why this route exists instead of pointing a keep-alive at "/".
+    assert.ok(body.length < 100, `expected a tiny body, got ${body.length} bytes`);
+  });
+});
+
 test("GET / serves the rendered landing page", async () => {
   await withServer(async (base) => {
     const res = await fetch(base + "/");

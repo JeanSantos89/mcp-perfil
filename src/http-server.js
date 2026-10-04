@@ -95,6 +95,15 @@ const httpServer = createServer(async (req, res) => {
 });
 
 async function handleRequest(req, res) {
+  if (req.method === "GET" && req.url === "/health") {
+    // Tiny response on purpose: this exists for uptime pingers / keep-alive
+    // crons, which can choke or reject runs if the body is too large (the
+    // full landing page is well over 100KB).
+    res.writeHead(200, { "Content-Type": "text/plain" });
+    res.end("ok");
+    return;
+  }
+
   if (req.method === "GET" && req.url === "/") {
     const profile = await loadProfile();
     // Live GitHub facts are a nice-to-have: if the API is down or rate
