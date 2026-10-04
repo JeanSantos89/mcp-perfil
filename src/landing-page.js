@@ -802,6 +802,14 @@ export function renderLandingPage(profile, liveRepos = null) {
     <div class="human"><div class="products">${productCards}</div></div>
     ${agentBlock(productsAgentPt, productsAgentEn)}
 
+    <section class="cell" style="padding: 56px var(--gutter) 0;" id="projetos">
+      <span class="index">${uiText("idxProjects")}</span>
+      <h2 class="section-title">${uiText("projectsHeadline")}</h2>
+      <div class="facets">${projFacets}</div>
+    </section>
+    <div class="human"><div class="grid3">${projCards}</div></div>
+    ${agentBlock(projAgentPt, projAgentEn)}
+
     <section class="cell" style="padding: 56px var(--gutter) 0;">
       <span class="index">${uiText("idxSkills")}</span>
     </section>
@@ -817,14 +825,6 @@ export function renderLandingPage(profile, liveRepos = null) {
       </div>
     </div>
     ${agentBlock(expAgentPt, expAgentEn)}
-
-    <section class="cell" style="padding: 56px var(--gutter) 0;" id="projetos">
-      <span class="index">${uiText("idxProjects")}</span>
-      <h2 class="section-title">${uiText("projectsHeadline")}</h2>
-      <div class="facets">${projFacets}</div>
-    </section>
-    <div class="human"><div class="grid3">${projCards}</div></div>
-    ${agentBlock(projAgentPt, projAgentEn)}
 
     <section class="cell" style="padding: 56px var(--gutter) 0;">
       <span class="index">${uiText("idxRecs")}</span>

@@ -9,9 +9,9 @@ export const UI = {
   idxNumbers: ["02 · Em números", "02 · In numbers"],
   idxProducts: ["03 · Construído por mim", "03 · Built by me"],
   productsHeadline: ["Ferramentas que eu mantenho", "Tools I build and maintain"],
-  idxSkills: ["04 · Habilidades", "04 · Skills"],
-  idxTrajectory: ["05 · Trajetória", "05 · Trajectory"],
-  idxProjects: ["06 · Projetos", "06 · Projects"],
+  idxProjects: ["04 · Projetos", "04 · Projects"],
+  idxSkills: ["05 · Habilidades", "05 · Skills"],
+  idxTrajectory: ["06 · Trajetória", "06 · Trajectory"],
   idxRecs: ["07 · Recomendações", "07 · Recommendations"],
   idxAgents: ["08 · Para agentes", "08 · For agents"],
   heroLabelA: [
