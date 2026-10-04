@@ -339,7 +339,7 @@ export function renderLandingPage(profile, liveRepos = null) {
     --bg-emphasis: #1e3a57;
     --text: var(--pearl);
     --text-muted: #91857c;
-    --border: #24405c;
+    --border: rgba(36, 64, 92, 0.2);
     --theme: var(--pearl);
     --ember: #a8392f;
     --card: #090909;
@@ -1194,7 +1194,7 @@ export function renderLandingPage(profile, liveRepos = null) {
         const TEXT_FROM = 0.72;
         if (!calibrated) calibrate(data);
 
-        ctx.font = Math.max(7, cellW * 1.25) + "px ui-monospace, 'JetBrains Mono', monospace";
+        ctx.font = Math.max(5, cellW * 0.55) + "px ui-monospace, 'JetBrains Mono', monospace";
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
 

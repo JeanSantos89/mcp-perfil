@@ -19,7 +19,7 @@ export const UI = {
     "Quality Architecture & SDET · I design the systems that keep fast delivery under control · Currently at",
   ],
   heroAbout: [
-    "Aprendi precisão num laboratório de química e clareza numa sala de aula. Hoje projeto sistemas de qualidade: frameworks de automação, observabilidade em produção e uma base de conhecimento que deixa o time entregar rápido sem voar às cegas.",
+    "Aprendi precisão num laboratório e clareza numa sala de aula. Hoje projeto sistemas de qualidade: frameworks de automação, observabilidade em produção e uma base de conhecimento que deixa o time entregar rápido sem voar às cegas.",
     "I learned precision in a chemistry lab and clarity in a classroom. Now I design quality systems: automation frameworks, production observability and a knowledge base that lets a team ship fast without flying blind.",
   ],
   copy: ["Copiar", "Copy"],
