@@ -427,6 +427,16 @@
       "status": "pronto"
     },
     {
+      "nome": "test-layer-advisor",
+      "descricao": "Para cada comportamento de um backlog de testes, sugere se dá para provar por teste de API/contrato ou se genuinamente não tem superfície de API e precisa ficar manual, por sobreposição de keyword com rotas conhecidas.",
+      "link": "https://github.com/JeanSantos89/test-layer-advisor",
+      "tecnologias": [
+        "TypeScript"
+      ],
+      "categoria": "IA & agentes",
+      "status": "pronto"
+    },
+    {
       "nome": "llm-eval-engineering",
       "descricao": "Laboratório de avaliação de LLM: mede a qualidade de um sistema RAG com DeepEval — fidelidade, métricas de recuperação e detecção de alucinação sobre um golden dataset categorizado.",
       "link": "https://github.com/JeanSantos89/llm-eval-engineering",
@@ -473,6 +483,18 @@
         "Teste de regressão"
       ],
       "categoria": "CI & confiabilidade",
+      "status": "pronto"
+    },
+    {
+      "nome": "misc-dev-utils",
+      "descricao": "Sete ferramentas soltas de workflow de dev: relatório de evidência em HTML autocontido, HTML para PDF sem pandoc, bootstrap de CLI/API para git self-hosted, fechamento de ticket com evidência, cobertura de revisão por histórico de git, scanner de segredo em histórico de shell e organizador de arquivo por regra.",
+      "link": "https://github.com/JeanSantos89/misc-dev-utils",
+      "tecnologias": [
+        "TypeScript",
+        "Python",
+        "Playwright"
+      ],
+      "categoria": "Utilidades de dev",
       "status": "pronto"
     },
     {
